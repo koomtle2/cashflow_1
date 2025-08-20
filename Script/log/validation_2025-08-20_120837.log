@@ -1,0 +1,9 @@
+=== VALIDATION 로그 파일 ===
+생성일시: 2025-08-20 12:08:37
+인코딩: UTF-8
+세션ID: 20250820_120837
+==================================================
+
+[2025-08-20 12:08:37] [INFO] [validation] [계정_SYSTEM] [이벤트_BATCH_PROCESSOR_INIT] [상세_배치처리시스템초기화완료] [데이터_{"max_workers": 3}]
+[2025-08-20 12:08:37] [INFO] [validation] [계정_SYSTEM] [이벤트_MAIN_PROCESSOR_INIT] [상세_메인프로세서초기화완료_세션20250820_120837]
+[2025-08-20 12:08:37] [ERROR] [validation] [계정_SYSTEM] [이벤트_PROCESSING_ERROR] [상세_처리중오류_파일을 찾을 수 없습니다: --analyze-pattern] [데이터_{"file_path": "--analyze-pattern"}]
