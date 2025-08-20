@@ -769,6 +769,12 @@ class LedgerExtractionEngine:
             2025: "C:/K04_cashflow_1/Ledgers/2025년01월-06월_계정별원장_인게니움_v1_null처리완료.xlsx"
         }
         
+        # 연도별 회계 처리 방식 정의
+        self.year_processing_modes = {
+            'year_end_substitution_years': [2022, 2023],  # 연말 손익대체 적용 연도
+            'standard_years': [2024, 2025]  # 표준 처리 연도
+        }
+        
         # BS/PL 계정 분류 (CLAUDE.md 기준)
         self.bs_ranges = {
             'assets': (10000, 25000),      # 100-200번대
@@ -777,16 +783,24 @@ class LedgerExtractionEngine:
         }
         
         self.pl_ranges = {
-            'revenue': [(40000, 42100), (90000, 92100)],
+            'revenue': [(41000, 42100), (90000, 92100)],  # 40000 제외
             'expenses': [(45000, 46100), (52000, 53100), (80000, 84100), (93000, 96100)]
+        }
+        
+        # 특별 계정 분류 (처리 제외 대상)
+        self.special_ranges = {
+            'summary': [(40000, 40100)],  # 손익 집계 계정
+            'vat': [(13500, 13600), (25500, 25600)]  # VAT 관련 계정
         }
         
         import logging
         logging.info("[원장추출엔진초기화] [파일매핑완료] [계정분류설정완료]")
     
     def extract_all_ledger_data(self, workbook) -> Dict:
-        """워크북에서 모든 원장 데이터 추출"""
+        """워크북에서 모든 원장 데이터 추출 (특별 계정 제외)"""
+        import logging
         extracted_data = {}
+        excluded_accounts = []
         
         for sheet_name in workbook.sheetnames:
             try:
@@ -799,6 +813,16 @@ class LedgerExtractionEngine:
                 
                 # 계정 타입 결정
                 account_type = self.classify_account_type(account_code)
+                
+                # 특별 계정(SUMMARY, VAT) 제외
+                if account_type in ['SUMMARY', 'VAT']:
+                    excluded_accounts.append({
+                        'account_code': account_code,
+                        'account_type': account_type,
+                        'sheet_name': sheet_name
+                    })
+                    logging.info(f"[계정제외] [코드_{account_code}] [타입_{account_type}] [시트_{sheet_name}]")
+                    continue
                 
                 # 전기이월 추출
                 carry_forward = self.extract_carry_forward(sheet)
@@ -818,6 +842,10 @@ class LedgerExtractionEngine:
             except Exception as e:
                 logging.error(f"[추출실패] [시트_{sheet_name}] [오류_{str(e)}]")
                 continue
+        
+        # 제외 계정 요약 로깅
+        if excluded_accounts:
+            logging.info(f"[제외계정요약] [총제외_{len(excluded_accounts)}개] [SUMMARY_{len([a for a in excluded_accounts if a['account_type'] == 'SUMMARY'])}개] [VAT_{len([a for a in excluded_accounts if a['account_type'] == 'VAT'])}개]")
         
         return extracted_data
     
@@ -840,30 +868,83 @@ class LedgerExtractionEngine:
             logging.error(f"[전기이월추출오류] [오류_{str(e)}]")
             return None
     
-    def extract_monthly_data(self, sheet, account_type):
+    def extract_monthly_data(self, sheet, account_type, year=None):
         """
-        월별 데이터 추출 - BS/PL 계정 구분 처리
+        월별 데이터 추출 - BS/PL 계정 구분 처리 + 연도별 분기
         BS: 월계 직전 거래행 G열 = 월말 잔액 (검증 완료 패턴)
-        PL: 월계행 차변-대변 = 월별 발생액 (새로 추가된 로직)
+        PL: 연도별 처리 방식 분기 적용
         """
         import logging
         monthly_data = {}
         
         try:
             if account_type == 'BS':
-                # BS 계정: 월계 직전 거래행 G열 잔액 추출
+                # BS 계정: 연도 무관하게 동일한 로직
                 monthly_data = self._extract_bs_monthly_balances(sheet)
             elif account_type == 'PL':
-                # PL 계정: 월계행 발생액 추출
-                monthly_data = self._extract_pl_monthly_amounts(sheet)
+                # PL 계정: 연도별 처리 방식 분기
+                monthly_data = self._extract_pl_monthly_amounts_with_year(sheet, year)
             else:
                 logging.warning(f"[알수없는계정타입] [타입_{account_type}] [기본BS로직적용]")
                 monthly_data = self._extract_bs_monthly_balances(sheet)
         
         except Exception as e:
-            logging.error(f"[월별데이터추출오류] [계정타입_{account_type}] [오류_{str(e)}]")
+            logging.error(f"[월별데이터추출오류] [계정타입_{account_type}] [연도_{year}] [오류_{str(e)}]")
         
         return monthly_data
+    
+    def _extract_pl_monthly_amounts_with_year(self, sheet, year):
+        """연도별 PL 계정 처리 분기"""
+        import logging
+        
+        if year in self.year_processing_modes['year_end_substitution_years']:
+            # 2022-2023년: 손익대체 제외 로직 적용
+            logging.info(f"[PL연도별처리] [연도_{year}] [모드_손익대체제외]")
+            return self._extract_pl_monthly_amounts(sheet)
+        elif year in self.year_processing_modes['standard_years']:
+            # 2024년 이후: 표준 로직 적용
+            logging.info(f"[PL연도별처리] [연도_{year}] [모드_표준처리]")
+            return self._extract_pl_standard_amounts(sheet)
+        else:
+            # 알 수 없는 연도: 기본 로직
+            logging.warning(f"[PL연도별처리] [연도_{year}] [모드_기본로직]")
+            return self._extract_pl_monthly_amounts(sheet)
+    
+    def _extract_pl_standard_amounts(self, sheet):
+        """PL 계정 표준 처리 (2024년 이후, 손익대체 없음)"""
+        import logging
+        
+        monthly_amounts = {}
+        current_month = None
+        
+        for row in range(6, sheet.max_row + 1):
+            a_val = sheet[f'A{row}'].value
+            b_val = sheet[f'B{row}'].value
+            e_val = sheet[f'E{row}'].value  # 차변
+            f_val = sheet[f'F{row}'].value  # 대변
+            
+            # MM-DD 패턴으로 월 인식
+            if a_val and isinstance(a_val, str) and '-' in a_val:
+                parts = a_val.split('-')
+                if len(parts) >= 2 and parts[0].isdigit():
+                    month = int(parts[0])
+                    if 1 <= month <= 12:
+                        current_month = month
+            
+            # 월계 행에서 발생액 추출 (표준 처리)
+            if b_val and isinstance(b_val, str) and '월         계' in b_val:
+                if current_month and current_month not in monthly_amounts:
+                    debit = e_val or 0
+                    credit = f_val or 0
+                    monthly_amount = debit - credit
+                    
+                    if monthly_amount != 0:
+                        monthly_amounts[current_month] = monthly_amount
+                        logging.info(f"[PL표준처리] [월_{current_month}] [차변_{debit}] [대변_{credit}] [발생액_{monthly_amount}]")
+                
+                current_month = None
+        
+        return monthly_amounts
     
     def _extract_bs_monthly_balances(self, sheet):
         """BS 계정 월별 잔액 추출 - 검증 완료된 패턴"""
@@ -903,19 +984,32 @@ class LedgerExtractionEngine:
         return monthly_balances
     
     def _extract_pl_monthly_amounts(self, sheet):
-        """PL 계정 월별 발생액 추출 - 수정된 로직"""
+        """PL 계정 월별 발생액 추출 - 손익대체 거래 제외 로직 적용"""
         import logging
         
         monthly_amounts = {}
         current_month = None
         monthly_debit_total = 0
         monthly_credit_total = 0
+        excluded_transactions = []  # 제외된 거래 추적
         
         for row in range(6, sheet.max_row + 1):
             a_val = sheet[f'A{row}'].value
             b_val = sheet[f'B{row}'].value
             e_val = sheet[f'E{row}'].value  # 차변
             f_val = sheet[f'F{row}'].value  # 대변
+            
+            # 손익대체 거래 감지 및 제외
+            if self._is_year_end_substitution(a_val, b_val, e_val, f_val):
+                excluded_transactions.append({
+                    'row': row,
+                    'date': a_val,
+                    'description': b_val,
+                    'debit': e_val or 0,
+                    'credit': f_val or 0
+                })
+                logging.warning(f"[손익대체제외] [행_{row}] [날짜_{a_val}] [적요_{b_val}] [차변_{e_val}] [대변_{f_val}]")
+                continue  # 해당 거래는 월별 집계에서 제외
             
             # MM-DD 패턴으로 월 인식
             if a_val and isinstance(a_val, str) and '-' in a_val:
@@ -935,7 +1029,7 @@ class LedgerExtractionEngine:
                         monthly_debit_total = 0
                         monthly_credit_total = 0
             
-            # 월 내 거래 누적
+            # 월 내 거래 누적 (손익대체 제외된 거래만)
             if current_month and a_val and isinstance(a_val, str) and '-' in a_val:
                 debit = e_val or 0
                 credit = f_val or 0
@@ -947,14 +1041,20 @@ class LedgerExtractionEngine:
             # 월계 행 발견시 처리 완료
             if b_val and isinstance(b_val, str) and '월         계' in b_val:
                 if current_month and current_month not in monthly_amounts:
-                    # 월계 행 직접 값 사용 (더 정확)
-                    debit = e_val or 0
-                    credit = f_val or 0
-                    monthly_amount = debit - credit
+                    # 손익대체가 있는 월의 경우 실제 발생액만 계산
+                    if self._has_substitution_in_month(excluded_transactions, current_month):
+                        # 실제 발생액 = 누적된 차변 - 누적된 대변 (손익대체 제외)
+                        monthly_amount = monthly_debit_total - monthly_credit_total
+                        logging.info(f"[PL손익대체월처리] [월_{current_month}] [실제발생액_{monthly_amount}] [제외된거래_{len([t for t in excluded_transactions if self._get_month_from_date(t['date']) == current_month])}건]")
+                    else:
+                        # 일반적인 월계 처리
+                        debit = e_val or 0
+                        credit = f_val or 0
+                        monthly_amount = debit - credit
+                        logging.info(f"[PL일반월처리] [월_{current_month}] [차변_{debit}] [대변_{credit}] [발생액_{monthly_amount}]")
                     
                     if monthly_amount != 0:
                         monthly_amounts[current_month] = monthly_amount
-                        logging.info(f"[PL월계발생액] [월_{current_month}] [차변_{debit}] [대변_{credit}] [발생액_{monthly_amount}]")
                 
                 current_month = None
                 monthly_debit_total = 0
@@ -967,7 +1067,51 @@ class LedgerExtractionEngine:
                 monthly_amounts[current_month] = net_amount
                 logging.info(f"[PL마지막월] [월_{current_month}] [차변총_{monthly_debit_total}] [대변총_{monthly_credit_total}] [순발생_{net_amount}]")
         
+        # 제외된 거래 요약 로깅
+        if excluded_transactions:
+            logging.info(f"[손익대체제외요약] [총제외건수_{len(excluded_transactions)}건] [주요제외월_{set([self._get_month_from_date(t['date']) for t in excluded_transactions if t['date']])}]")
+        
         return monthly_amounts
+    
+    def _is_year_end_substitution(self, date_val, description_val, debit_val, credit_val):
+        """연말 손익대체 거래 감지"""
+        if not date_val or not description_val:
+            return False
+        
+        date_str = str(date_val)
+        desc_str = str(description_val).lower()
+        
+        # 12월 31일 + 손익 관련 키워드
+        is_year_end = '12-31' in date_str
+        is_substitution = any(keyword in desc_str for keyword in [
+            '손익', '대체', '결산', '순손실', '순이익'
+        ])
+        
+        # 큰 금액의 대변 (손익대체 특징)
+        is_large_credit = credit_val and isinstance(credit_val, (int, float)) and credit_val > 10000000  # 1천만원 이상
+        
+        return is_year_end and is_substitution and is_large_credit
+    
+    def _has_substitution_in_month(self, excluded_transactions, month):
+        """해당 월에 손익대체 거래가 있는지 확인"""
+        for transaction in excluded_transactions:
+            if self._get_month_from_date(transaction['date']) == month:
+                return True
+        return False
+    
+    def _get_month_from_date(self, date_val):
+        """날짜에서 월 추출"""
+        if not date_val:
+            return None
+        
+        date_str = str(date_val)
+        if '-' in date_str:
+            parts = date_str.split('-')
+            if len(parts) >= 2 and parts[0].isdigit():
+                month = int(parts[0])
+                if 1 <= month <= 12:
+                    return month
+        return None
     
     def extract_account_code(self, sheet_name):
         """시트명 파싱: 정규표현식 `\\((\\d+)\\)`으로 계정코드 추출 (CLAUDE.md 규칙)"""
@@ -982,9 +1126,17 @@ class LedgerExtractionEngine:
             return None
     
     def classify_account_type(self, account_code):
-        """계정 분류: BS/PL 구분"""
+        """계정 분류: BS/PL 구분 + 특별 계정 처리"""
+        import logging
         try:
             code_int = int(account_code)
+            
+            # 특별 계정 먼저 확인 (처리 제외 대상)
+            for special_type, ranges in self.special_ranges.items():
+                for start, end in ranges:
+                    if start <= code_int < end:
+                        logging.info(f"[특별계정분류] [코드_{account_code}] [타입_{special_type.upper()}] [처리제외]")
+                        return special_type.upper()
             
             # BS 계정 확인
             for range_name, (start, end) in self.bs_ranges.items():
@@ -996,10 +1148,6 @@ class LedgerExtractionEngine:
                 for start, end in range_list:
                     if start <= code_int < end:
                         return 'PL'
-            
-            # VAT 계정 특별 처리
-            if account_code in ['13500', '25500']:
-                return 'VAT'
             
             logging.warning(f"[계정분류실패] [코드_{account_code}] [알수없는범위]")
             return 'UNKNOWN'
