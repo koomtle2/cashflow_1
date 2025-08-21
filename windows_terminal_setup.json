@@ -1,0 +1,52 @@
+{
+    "$help": "Windows Terminal 설정 파일 - Claude 프로젝트 자동 실행용",
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "defaultProfile": "{claude-project-guid}",
+    "profiles": {
+        "defaults": {
+            "font": {
+                "face": "Cascadia Code"
+            }
+        },
+        "list": [
+            {
+                "guid": "{claude-project-guid}",
+                "name": "Claude Project",
+                "commandline": "cmd.exe /k \"cd C:\\K04_cashflow_1 && claude_rules_reminder.bat\"",
+                "startingDirectory": "C:\\K04_cashflow_1",
+                "icon": "📊",
+                "colorScheme": "Campbell",
+                "fontSize": 11,
+                "cursorShape": "bar"
+            },
+            {
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "name": "Command Prompt",
+                "commandline": "cmd.exe",
+                "hidden": false
+            },
+            {
+                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+                "name": "PowerShell",
+                "commandline": "powershell.exe",
+                "hidden": false
+            }
+        ]
+    },
+    "schemes": [
+        {
+            "name": "Campbell",
+            "foreground": "#CCCCCC",
+            "background": "#0C0C0C"
+        }
+    ],
+    "actions": [
+        {
+            "command": {
+                "action": "newTab",
+                "profile": "Claude Project"
+            },
+            "keys": "ctrl+shift+c"
+        }
+    ]
+}
