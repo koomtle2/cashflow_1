@@ -1,0 +1,16 @@
+{
+  "timestamp": "2025-08-21T12:03:54.509638",
+  "total_tests": 25,
+  "passed_tests": 21,
+  "failed_tests": 4,
+  "success_rate": 84.0,
+  "test_classes": [
+    "TestLoggingSystem",
+    "TestValidationFramework",
+    "TestMarkingSystem",
+    "TestMCPInterface",
+    "TestBatchProcessor",
+    "TestMainProcessor",
+    "TestCLAUDEMdCompliance"
+  ]
+}

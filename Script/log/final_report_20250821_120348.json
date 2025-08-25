@@ -1,0 +1,60 @@
+{
+  "processing_summary": {
+    "session_id": "20250821_120348",
+    "input_file": "N/A",
+    "output_file": "test_ledger_processed_20250821_120348.xlsx",
+    "processing_time": 0.267397,
+    "timestamp": "2025-08-21T12:03:49.242457"
+  },
+  "statistics": {
+    "session_id": "20250821_120348",
+    "total_accounts": 4,
+    "processed_accounts": 0,
+    "failed_accounts": 0,
+    "uncertain_accounts": 0,
+    "marked_cells": 0,
+    "contamination_alerts": 0,
+    "processing_phases": {
+      "phase1_python_basic": {
+        "status": "COMPLETED",
+        "duration": 0.00194549560546875
+      },
+      "phase2_mcp_analysis": {
+        "status": "COMPLETED",
+        "duration": 0.0052983760833740234
+      },
+      "phase3_python_final": {
+        "status": "COMPLETED",
+        "duration": 0.002778291702270508
+      }
+    }
+  },
+  "quality_metrics": {
+    "overall_score": 100,
+    "quality_grade": "A",
+    "data_integrity": "INTACT",
+    "marked_cells_count": 0,
+    "uncertain_items_count": 0,
+    "contamination_detected": false,
+    "processing_accuracy_rate": 0.0
+  },
+  "phase_summaries": {
+    "phase1_python_basic": {
+      "validated_accounts": 0,
+      "invalid_sheets": 4,
+      "marked_cells": 0
+    },
+    "phase2_mcp_analysis": {
+      "analysis_results": 0,
+      "uncertain_items": 0,
+      "batch_results": 0
+    },
+    "phase3_final_validation": {
+      "contamination_detected": false,
+      "final_validation_passed": true
+    }
+  },
+  "recommendations": [
+    "4개 계정에서 검증이 실패했습니다. 해당 계정들을 확인해주세요."
+  ]
+}

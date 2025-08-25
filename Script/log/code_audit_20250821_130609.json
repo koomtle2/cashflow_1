@@ -1,0 +1,3218 @@
+{
+  "timestamp": "2025-08-21T13:06:09.254690",
+  "audit_duration_seconds": 0.712145,
+  "summary": {
+    "total_issues": 270,
+    "quality_score": 0,
+    "grade": "C",
+    "severity_breakdown": {
+      "HIGH": 3,
+      "MEDIUM": 46,
+      "LOW": 221
+    },
+    "category_breakdown": {
+      "QUALITY": 257,
+      "SECURITY": 0,
+      "PERFORMANCE": 0,
+      "COMPLIANCE": 9
+    }
+  },
+  "issues": [
+    {
+      "type": "LONG_FUNCTION",
+      "file": "C:\\K04_cashflow_1\\Script\\batch_processor.py",
+      "function": "_process_batch_task",
+      "line": 193,
+      "length": 86,
+      "threshold": 50,
+      "message": "함수 _process_batch_task이 너무 깁니다 (86줄)",
+      "severity": "MEDIUM",
+      "recommendation": "함수를 더 작은 단위로 분할하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\batch_processor.py",
+      "lines": [
+        14,
+        15
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [14, 15])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\batch_processor.py",
+      "lines": [
+        133,
+        134
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [133, 134])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\batch_processor.py",
+      "lines": [
+        310,
+        311
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [310, 311])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\batch_processor.py",
+      "lines": [
+        351,
+        527
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [351, 527])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\batch_processor.py",
+      "lines": [
+        386,
+        387
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [386, 387])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\batch_processor.py",
+      "lines": [
+        389,
+        390
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [389, 390])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\batch_processor.py",
+      "lines": [
+        392,
+        393
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [392, 393])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\batch_processor.py",
+      "lines": [
+        450,
+        451
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [450, 451])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\batch_processor.py",
+      "lines": [
+        503,
+        514
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [503, 514])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\batch_processor.py",
+      "lines": [
+        504,
+        515
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [504, 515])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\batch_processor.py",
+      "lines": [
+        505,
+        516
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [505, 516])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\batch_processor.py",
+      "lines": [
+        547,
+        548
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [547, 548])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\logging_system.py",
+      "lines": [
+        65,
+        66
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [65, 66])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\logging_system.py",
+      "lines": [
+        68,
+        69
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [68, 69])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\logging_system.py",
+      "lines": [
+        71,
+        72
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [71, 72])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\logging_system.py",
+      "lines": [
+        74,
+        75
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [74, 75])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\logging_system.py",
+      "lines": [
+        77,
+        78
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [77, 78])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\logging_system.py",
+      "lines": [
+        111,
+        112
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [111, 112])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\logging_system.py",
+      "lines": [
+        134,
+        135
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [134, 135])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\logging_system.py",
+      "lines": [
+        145,
+        146
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [145, 146])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\logging_system.py",
+      "lines": [
+        238,
+        239
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [238, 239])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\logging_system.py",
+      "lines": [
+        312,
+        313
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [312, 313])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\logging_system.py",
+      "lines": [
+        315,
+        316
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [315, 316])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "HIGH_COMPLEXITY",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "function": "_extract_pl_monthly_amounts",
+      "line": 1101,
+      "complexity": 18,
+      "threshold": 10,
+      "message": "함수 _extract_pl_monthly_amounts의 복잡도가 높습니다 (18)",
+      "severity": "MEDIUM",
+      "recommendation": "함수를 더 작은 단위로 분할하세요"
+    },
+    {
+      "type": "LONG_FUNCTION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "function": "process_ledger_file",
+      "line": 101,
+      "length": 57,
+      "threshold": 50,
+      "message": "함수 process_ledger_file이 너무 깁니다 (57줄)",
+      "severity": "MEDIUM",
+      "recommendation": "함수를 더 작은 단위로 분할하세요"
+    },
+    {
+      "type": "LONG_FUNCTION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "function": "_execute_phase1_python_basic_validation",
+      "line": 158,
+      "length": 81,
+      "threshold": 50,
+      "message": "함수 _execute_phase1_python_basic_validation이 너무 깁니다 (81줄)",
+      "severity": "MEDIUM",
+      "recommendation": "함수를 더 작은 단위로 분할하세요"
+    },
+    {
+      "type": "LONG_FUNCTION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "function": "_execute_phase2_mcp_analysis",
+      "line": 239,
+      "length": 84,
+      "threshold": 50,
+      "message": "함수 _execute_phase2_mcp_analysis이 너무 깁니다 (84줄)",
+      "severity": "MEDIUM",
+      "recommendation": "함수를 더 작은 단위로 분할하세요"
+    },
+    {
+      "type": "LONG_FUNCTION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "function": "_execute_phase3_python_final_validation",
+      "line": 323,
+      "length": 84,
+      "threshold": 50,
+      "message": "함수 _execute_phase3_python_final_validation이 너무 깁니다 (84줄)",
+      "severity": "MEDIUM",
+      "recommendation": "함수를 더 작은 단위로 분할하세요"
+    },
+    {
+      "type": "LONG_FUNCTION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "function": "_finalize_processing",
+      "line": 407,
+      "length": 55,
+      "threshold": 50,
+      "message": "함수 _finalize_processing이 너무 깁니다 (55줄)",
+      "severity": "MEDIUM",
+      "recommendation": "함수를 더 작은 단위로 분할하세요"
+    },
+    {
+      "type": "LONG_FUNCTION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "function": "_generate_final_report",
+      "line": 627,
+      "length": 55,
+      "threshold": 50,
+      "message": "함수 _generate_final_report이 너무 깁니다 (55줄)",
+      "severity": "MEDIUM",
+      "recommendation": "함수를 더 작은 단위로 분할하세요"
+    },
+    {
+      "type": "LONG_FUNCTION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "function": "extract_all_ledger_data",
+      "line": 799,
+      "length": 53,
+      "threshold": 50,
+      "message": "함수 extract_all_ledger_data이 너무 깁니다 (53줄)",
+      "severity": "MEDIUM",
+      "recommendation": "함수를 더 작은 단위로 분할하세요"
+    },
+    {
+      "type": "LONG_FUNCTION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "function": "extract_as_timeseries",
+      "line": 896,
+      "length": 52,
+      "threshold": 50,
+      "message": "함수 extract_as_timeseries이 너무 깁니다 (52줄)",
+      "severity": "MEDIUM",
+      "recommendation": "함수를 더 작은 단위로 분할하세요"
+    },
+    {
+      "type": "LONG_FUNCTION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "function": "process_with_vat_adjustment",
+      "line": 948,
+      "length": 63,
+      "threshold": 50,
+      "message": "함수 process_with_vat_adjustment이 너무 깁니다 (63줄)",
+      "severity": "MEDIUM",
+      "recommendation": "함수를 더 작은 단위로 분할하세요"
+    },
+    {
+      "type": "LONG_FUNCTION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "function": "_extract_pl_monthly_amounts",
+      "line": 1101,
+      "length": 90,
+      "threshold": 50,
+      "message": "함수 _extract_pl_monthly_amounts이 너무 깁니다 (90줄)",
+      "severity": "MEDIUM",
+      "recommendation": "함수를 더 작은 단위로 분할하세요"
+    },
+    {
+      "type": "LONG_FUNCTION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "function": "_integrate_pl_data",
+      "line": 1329,
+      "length": 58,
+      "threshold": 50,
+      "message": "함수 _integrate_pl_data이 너무 깁니다 (58줄)",
+      "severity": "MEDIUM",
+      "recommendation": "함수를 더 작은 단위로 분할하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "lines": [
+        32,
+        33
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [32, 33])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "lines": [
+        128,
+        129
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [128, 129])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "lines": [
+        131,
+        132
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [131, 132])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "lines": [
+        149,
+        205,
+        454,
+        620,
+        674
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 5곳에서 발견됨 (라인: [149, 205, 454, 620, 674])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "lines": [
+        202,
+        203
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [202, 203])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "lines": [
+        223,
+        307,
+        391
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 3곳에서 발견됨 (라인: [223, 307, 391])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "lines": [
+        285,
+        286
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [285, 286])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "lines": [
+        300,
+        301
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [300, 301])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "lines": [
+        415,
+        416
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [415, 416])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "lines": [
+        426,
+        427
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [426, 427])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "lines": [
+        536,
+        537
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [536, 537])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "lines": [
+        708,
+        709
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [708, 709])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "lines": [
+        750,
+        751
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [750, 751])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "lines": [
+        795,
+        796
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [795, 796])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "lines": [
+        813,
+        814
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [813, 814])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "lines": [
+        826,
+        827
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [826, 827])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "lines": [
+        829,
+        830
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [829, 830])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "lines": [
+        890,
+        891
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [890, 891])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "lines": [
+        907,
+        908
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [907, 908])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "lines": [
+        910,
+        911
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [910, 911])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "lines": [
+        940,
+        941
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [940, 941])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "lines": [
+        954,
+        955
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [954, 955])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "lines": [
+        957,
+        958
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [957, 958])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "lines": [
+        969,
+        970
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [969, 970])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "lines": [
+        976,
+        977
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [976, 977])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "lines": [
+        1034,
+        1072,
+        1110
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 3곳에서 발견됨 (라인: [1034, 1072, 1110])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "lines": [
+        1035,
+        1073,
+        1111
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 3곳에서 발견됨 (라인: [1035, 1073, 1111])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "lines": [
+        1036,
+        1112
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [1036, 1112])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "lines": [
+        1037,
+        1113
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [1037, 1113])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "lines": [
+        1038,
+        1114
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [1038, 1114])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "lines": [
+        1040,
+        1077,
+        1128
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 3곳에서 발견됨 (라인: [1040, 1077, 1128])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "lines": [
+        1041,
+        1078,
+        1129
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 3곳에서 발견됨 (라인: [1041, 1078, 1129])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "lines": [
+        1042,
+        1079,
+        1130
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 3곳에서 발견됨 (라인: [1042, 1079, 1130])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "lines": [
+        1043,
+        1080,
+        1131
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 3곳에서 발견됨 (라인: [1043, 1080, 1131])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "lines": [
+        1044,
+        1081,
+        1132,
+        1225
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 4곳에서 발견됨 (라인: [1044, 1081, 1132, 1225])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "lines": [
+        1045,
+        1082
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [1045, 1082])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "lines": [
+        1052,
+        1166
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [1052, 1166])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "lines": [
+        1055,
+        1170,
+        1171
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 3곳에서 발견됨 (라인: [1055, 1170, 1171])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "lines": [
+        1106,
+        1174
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [1106, 1174])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "lines": [
+        1136,
+        1179
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [1136, 1179])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "lines": [
+        1137,
+        1180
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [1137, 1180])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "lines": [
+        1195,
+        1196
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [1195, 1196])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "lines": [
+        1204,
+        1205
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [1204, 1205])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "lines": [
+        1266,
+        1267
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [1266, 1267])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "lines": [
+        1287,
+        1288
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [1287, 1288])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "HIGH_COMPLEXITY",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "function": "_extract_pl_monthly_amounts",
+      "line": 986,
+      "complexity": 18,
+      "threshold": 10,
+      "message": "함수 _extract_pl_monthly_amounts의 복잡도가 높습니다 (18)",
+      "severity": "MEDIUM",
+      "recommendation": "함수를 더 작은 단위로 분할하세요"
+    },
+    {
+      "type": "LONG_FUNCTION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "function": "process_ledger_file",
+      "line": 101,
+      "length": 57,
+      "threshold": 50,
+      "message": "함수 process_ledger_file이 너무 깁니다 (57줄)",
+      "severity": "MEDIUM",
+      "recommendation": "함수를 더 작은 단위로 분할하세요"
+    },
+    {
+      "type": "LONG_FUNCTION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "function": "_execute_phase1_python_basic_validation",
+      "line": 158,
+      "length": 81,
+      "threshold": 50,
+      "message": "함수 _execute_phase1_python_basic_validation이 너무 깁니다 (81줄)",
+      "severity": "MEDIUM",
+      "recommendation": "함수를 더 작은 단위로 분할하세요"
+    },
+    {
+      "type": "LONG_FUNCTION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "function": "_execute_phase2_mcp_analysis",
+      "line": 239,
+      "length": 84,
+      "threshold": 50,
+      "message": "함수 _execute_phase2_mcp_analysis이 너무 깁니다 (84줄)",
+      "severity": "MEDIUM",
+      "recommendation": "함수를 더 작은 단위로 분할하세요"
+    },
+    {
+      "type": "LONG_FUNCTION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "function": "_execute_phase3_python_final_validation",
+      "line": 323,
+      "length": 84,
+      "threshold": 50,
+      "message": "함수 _execute_phase3_python_final_validation이 너무 깁니다 (84줄)",
+      "severity": "MEDIUM",
+      "recommendation": "함수를 더 작은 단위로 분할하세요"
+    },
+    {
+      "type": "LONG_FUNCTION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "function": "_finalize_processing",
+      "line": 407,
+      "length": 55,
+      "threshold": 50,
+      "message": "함수 _finalize_processing이 너무 깁니다 (55줄)",
+      "severity": "MEDIUM",
+      "recommendation": "함수를 더 작은 단위로 분할하세요"
+    },
+    {
+      "type": "LONG_FUNCTION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "function": "_generate_final_report",
+      "line": 627,
+      "length": 55,
+      "threshold": 50,
+      "message": "함수 _generate_final_report이 너무 깁니다 (55줄)",
+      "severity": "MEDIUM",
+      "recommendation": "함수를 더 작은 단위로 분할하세요"
+    },
+    {
+      "type": "LONG_FUNCTION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "function": "extract_all_ledger_data",
+      "line": 799,
+      "length": 53,
+      "threshold": 50,
+      "message": "함수 extract_all_ledger_data이 너무 깁니다 (53줄)",
+      "severity": "MEDIUM",
+      "recommendation": "함수를 더 작은 단위로 분할하세요"
+    },
+    {
+      "type": "LONG_FUNCTION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "function": "_extract_pl_monthly_amounts",
+      "line": 986,
+      "length": 90,
+      "threshold": 50,
+      "message": "함수 _extract_pl_monthly_amounts이 너무 깁니다 (90줄)",
+      "severity": "MEDIUM",
+      "recommendation": "함수를 더 작은 단위로 분할하세요"
+    },
+    {
+      "type": "LONG_FUNCTION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "function": "_integrate_pl_data",
+      "line": 1214,
+      "length": 58,
+      "threshold": 50,
+      "message": "함수 _integrate_pl_data이 너무 깁니다 (58줄)",
+      "severity": "MEDIUM",
+      "recommendation": "함수를 더 작은 단위로 분할하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "lines": [
+        32,
+        33
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [32, 33])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "lines": [
+        128,
+        129
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [128, 129])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "lines": [
+        131,
+        132
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [131, 132])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "lines": [
+        149,
+        205,
+        454,
+        620,
+        674
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 5곳에서 발견됨 (라인: [149, 205, 454, 620, 674])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "lines": [
+        202,
+        203
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [202, 203])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "lines": [
+        223,
+        307,
+        391
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 3곳에서 발견됨 (라인: [223, 307, 391])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "lines": [
+        285,
+        286
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [285, 286])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "lines": [
+        300,
+        301
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [300, 301])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "lines": [
+        415,
+        416
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [415, 416])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "lines": [
+        426,
+        427
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [426, 427])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "lines": [
+        536,
+        537
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [536, 537])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "lines": [
+        708,
+        709
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [708, 709])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "lines": [
+        750,
+        751
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [750, 751])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "lines": [
+        795,
+        796
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [795, 796])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "lines": [
+        813,
+        814
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [813, 814])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "lines": [
+        826,
+        827
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [826, 827])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "lines": [
+        829,
+        830
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [829, 830])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "lines": [
+        890,
+        891
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [890, 891])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "lines": [
+        919,
+        957,
+        995
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 3곳에서 발견됨 (라인: [919, 957, 995])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "lines": [
+        920,
+        958,
+        996
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 3곳에서 발견됨 (라인: [920, 958, 996])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "lines": [
+        921,
+        997
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [921, 997])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "lines": [
+        922,
+        998
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [922, 998])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "lines": [
+        923,
+        999
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [923, 999])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "lines": [
+        925,
+        962,
+        1013
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 3곳에서 발견됨 (라인: [925, 962, 1013])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "lines": [
+        926,
+        963,
+        1014
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 3곳에서 발견됨 (라인: [926, 963, 1014])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "lines": [
+        927,
+        964,
+        1015
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 3곳에서 발견됨 (라인: [927, 964, 1015])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "lines": [
+        928,
+        965,
+        1016
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 3곳에서 발견됨 (라인: [928, 965, 1016])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "lines": [
+        929,
+        966,
+        1017,
+        1110
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 4곳에서 발견됨 (라인: [929, 966, 1017, 1110])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "lines": [
+        930,
+        967
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [930, 967])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "lines": [
+        937,
+        1051
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [937, 1051])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "lines": [
+        940,
+        1055,
+        1056
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 3곳에서 발견됨 (라인: [940, 1055, 1056])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "lines": [
+        991,
+        1059
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [991, 1059])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "lines": [
+        1021,
+        1064
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [1021, 1064])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "lines": [
+        1022,
+        1065
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [1022, 1065])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "lines": [
+        1080,
+        1081
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [1080, 1081])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "lines": [
+        1089,
+        1090
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [1089, 1090])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "lines": [
+        1151,
+        1152
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [1151, 1152])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "lines": [
+        1172,
+        1173
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [1172, 1173])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "LONG_FUNCTION",
+      "file": "C:\\K04_cashflow_1\\Script\\marking_system.py",
+      "function": "mark_uncertain_cell",
+      "line": 48,
+      "length": 77,
+      "threshold": 50,
+      "message": "함수 mark_uncertain_cell이 너무 깁니다 (77줄)",
+      "severity": "MEDIUM",
+      "recommendation": "함수를 더 작은 단위로 분할하세요"
+    },
+    {
+      "type": "LONG_FUNCTION",
+      "file": "C:\\K04_cashflow_1\\Script\\marking_system.py",
+      "function": "mark_contamination_alert",
+      "line": 168,
+      "length": 51,
+      "threshold": 50,
+      "message": "함수 mark_contamination_alert이 너무 깁니다 (51줄)",
+      "severity": "MEDIUM",
+      "recommendation": "함수를 더 작은 단위로 분할하세요"
+    },
+    {
+      "type": "LONG_FUNCTION",
+      "file": "C:\\K04_cashflow_1\\Script\\marking_system.py",
+      "function": "create_marking_summary_sheet",
+      "line": 241,
+      "length": 82,
+      "threshold": 50,
+      "message": "함수 create_marking_summary_sheet이 너무 깁니다 (82줄)",
+      "severity": "MEDIUM",
+      "recommendation": "함수를 더 작은 단위로 분할하세요"
+    },
+    {
+      "type": "LONG_FUNCTION",
+      "file": "C:\\K04_cashflow_1\\Script\\marking_system.py",
+      "function": "detect_cross_contamination",
+      "line": 421,
+      "length": 94,
+      "threshold": 50,
+      "message": "함수 detect_cross_contamination이 너무 깁니다 (94줄)",
+      "severity": "MEDIUM",
+      "recommendation": "함수를 더 작은 단위로 분할하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\marking_system.py",
+      "lines": [
+        75,
+        76
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [75, 76])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\marking_system.py",
+      "lines": [
+        96,
+        97
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [96, 97])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\marking_system.py",
+      "lines": [
+        139,
+        148
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [139, 148])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\marking_system.py",
+      "lines": [
+        140,
+        149
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [140, 149])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\marking_system.py",
+      "lines": [
+        141,
+        150
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [141, 150])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\marking_system.py",
+      "lines": [
+        142,
+        151
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [142, 151])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\marking_system.py",
+      "lines": [
+        247,
+        248
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [247, 248])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\marking_system.py",
+      "lines": [
+        289,
+        290
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [289, 290])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\marking_system.py",
+      "lines": [
+        292,
+        293
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [292, 293])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\marking_system.py",
+      "lines": [
+        343,
+        344
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [343, 344])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\marking_system.py",
+      "lines": [
+        368,
+        369
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [368, 369])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\marking_system.py",
+      "lines": [
+        435,
+        453,
+        471
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 3곳에서 발견됨 (라인: [435, 453, 471])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\marking_system.py",
+      "lines": [
+        436,
+        454,
+        472
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 3곳에서 발견됨 (라인: [436, 454, 472])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\marking_system.py",
+      "lines": [
+        437,
+        455,
+        473
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 3곳에서 발견됨 (라인: [437, 455, 473])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\marking_system.py",
+      "lines": [
+        442,
+        478,
+        496
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 3곳에서 발견됨 (라인: [442, 478, 496])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\marking_system.py",
+      "lines": [
+        443,
+        479,
+        497
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 3곳에서 발견됨 (라인: [443, 479, 497])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\marking_system.py",
+      "lines": [
+        447,
+        465
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [447, 465])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\marking_system.py",
+      "lines": [
+        597,
+        625
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [597, 625])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\marking_system.py",
+      "lines": [
+        598,
+        626
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [598, 626])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\marking_system.py",
+      "lines": [
+        603,
+        631
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [603, 631])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\marking_system.py",
+      "lines": [
+        604,
+        632
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [604, 632])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\marking_system.py",
+      "lines": [
+        618,
+        642
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [618, 642])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "LONG_FUNCTION",
+      "file": "C:\\K04_cashflow_1\\Script\\mcp_interface.py",
+      "function": "analyze_account_patterns",
+      "line": 71,
+      "length": 67,
+      "threshold": 50,
+      "message": "함수 analyze_account_patterns이 너무 깁니다 (67줄)",
+      "severity": "MEDIUM",
+      "recommendation": "함수를 더 작은 단위로 분할하세요"
+    },
+    {
+      "type": "LONG_FUNCTION",
+      "file": "C:\\K04_cashflow_1\\Script\\mcp_interface.py",
+      "function": "verify_vat_status",
+      "line": 138,
+      "length": 64,
+      "threshold": 50,
+      "message": "함수 verify_vat_status이 너무 깁니다 (64줄)",
+      "severity": "MEDIUM",
+      "recommendation": "함수를 더 작은 단위로 분할하세요"
+    },
+    {
+      "type": "LONG_FUNCTION",
+      "file": "C:\\K04_cashflow_1\\Script\\mcp_interface.py",
+      "function": "detect_data_anomalies",
+      "line": 202,
+      "length": 53,
+      "threshold": 50,
+      "message": "함수 detect_data_anomalies이 너무 깁니다 (53줄)",
+      "severity": "MEDIUM",
+      "recommendation": "함수를 더 작은 단위로 분할하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\mcp_interface.py",
+      "lines": [
+        81,
+        82
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [81, 82])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\mcp_interface.py",
+      "lines": [
+        97,
+        98
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [97, 98])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\mcp_interface.py",
+      "lines": [
+        102,
+        103
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [102, 103])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\mcp_interface.py",
+      "lines": [
+        115,
+        116
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [115, 116])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\mcp_interface.py",
+      "lines": [
+        119,
+        190
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [119, 190])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\mcp_interface.py",
+      "lines": [
+        120,
+        191,
+        370
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 3곳에서 발견됨 (라인: [120, 191, 370])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\mcp_interface.py",
+      "lines": [
+        121,
+        192,
+        371
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 3곳에서 발견됨 (라인: [121, 192, 371])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\mcp_interface.py",
+      "lines": [
+        122,
+        193,
+        246
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 3곳에서 발견됨 (라인: [122, 193, 246])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\mcp_interface.py",
+      "lines": [
+        163,
+        164
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [163, 164])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\mcp_interface.py",
+      "lines": [
+        166,
+        167
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [166, 167])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\mcp_interface.py",
+      "lines": [
+        188,
+        241
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [188, 241])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\mcp_interface.py",
+      "lines": [
+        189,
+        242
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [189, 242])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\mcp_interface.py",
+      "lines": [
+        194,
+        247
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [194, 247])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\mcp_interface.py",
+      "lines": [
+        195,
+        248
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [195, 248])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\mcp_interface.py",
+      "lines": [
+        196,
+        249
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [196, 249])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\mcp_interface.py",
+      "lines": [
+        337,
+        344
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [337, 344])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\mcp_interface.py",
+      "lines": [
+        382,
+        398,
+        413
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 3곳에서 발견됨 (라인: [382, 398, 413])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\mcp_interface.py",
+      "lines": [
+        434,
+        435
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [434, 435])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\mcp_interface.py",
+      "lines": [
+        437,
+        438
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [437, 438])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "LONG_FUNCTION",
+      "file": "C:\\K04_cashflow_1\\Script\\run_system_test.py",
+      "function": "run_basic_system_test",
+      "line": 71,
+      "length": 62,
+      "threshold": 50,
+      "message": "함수 run_basic_system_test이 너무 깁니다 (62줄)",
+      "severity": "MEDIUM",
+      "recommendation": "함수를 더 작은 단위로 분할하세요"
+    },
+    {
+      "type": "LONG_FUNCTION",
+      "file": "C:\\K04_cashflow_1\\Script\\run_system_test.py",
+      "function": "run_file_processing_test",
+      "line": 133,
+      "length": 90,
+      "threshold": 50,
+      "message": "함수 run_file_processing_test이 너무 깁니다 (90줄)",
+      "severity": "MEDIUM",
+      "recommendation": "함수를 더 작은 단위로 분할하세요"
+    },
+    {
+      "type": "LONG_FUNCTION",
+      "file": "C:\\K04_cashflow_1\\Script\\run_system_test.py",
+      "function": "run_claude_md_compliance_test",
+      "line": 223,
+      "length": 127,
+      "threshold": 50,
+      "message": "함수 run_claude_md_compliance_test이 너무 깁니다 (127줄)",
+      "severity": "MEDIUM",
+      "recommendation": "함수를 더 작은 단위로 분할하세요"
+    },
+    {
+      "type": "LONG_FUNCTION",
+      "file": "C:\\K04_cashflow_1\\Script\\run_system_test.py",
+      "function": "generate_final_report",
+      "line": 391,
+      "length": 60,
+      "threshold": 50,
+      "message": "함수 generate_final_report이 너무 깁니다 (60줄)",
+      "severity": "MEDIUM",
+      "recommendation": "함수를 더 작은 단위로 분할하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\run_system_test.py",
+      "lines": [
+        57,
+        58
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [57, 58])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\run_system_test.py",
+      "lines": [
+        60,
+        61
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [60, 61])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\run_system_test.py",
+      "lines": [
+        77,
+        141,
+        229
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 3곳에서 발견됨 (라인: [77, 141, 229])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\run_system_test.py",
+      "lines": [
+        114,
+        195
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [114, 195])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\run_system_test.py",
+      "lines": [
+        125,
+        215
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [125, 215])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\run_system_test.py",
+      "lines": [
+        126,
+        216
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [126, 216])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\run_system_test.py",
+      "lines": [
+        127,
+        217
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [127, 217])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\run_system_test.py",
+      "lines": [
+        128,
+        218
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [128, 218])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\run_system_test.py",
+      "lines": [
+        129,
+        130,
+        219,
+        220,
+        347
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 5곳에서 발견됨 (라인: [129, 130, 219, 220, 347])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\run_system_test.py",
+      "lines": [
+        152,
+        153
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [152, 153])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\run_system_test.py",
+      "lines": [
+        161,
+        162
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [161, 162])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\run_system_test.py",
+      "lines": [
+        167,
+        168
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [167, 168])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\run_system_test.py",
+      "lines": [
+        170,
+        171
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [170, 171])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\run_system_test.py",
+      "lines": [
+        203,
+        204
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [203, 204])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\run_system_test.py",
+      "lines": [
+        244,
+        245
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [244, 245])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\run_system_test.py",
+      "lines": [
+        268,
+        269
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [268, 269])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\run_system_test.py",
+      "lines": [
+        283,
+        284
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [283, 284])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\run_system_test.py",
+      "lines": [
+        288,
+        289
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [288, 289])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\run_system_test.py",
+      "lines": [
+        328,
+        329
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [328, 329])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\run_system_test.py",
+      "lines": [
+        337,
+        338
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [337, 338])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\run_system_test.py",
+      "lines": [
+        367,
+        368
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [367, 368])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\run_system_test.py",
+      "lines": [
+        404,
+        405
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [404, 405])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\run_system_test.py",
+      "lines": [
+        456,
+        457
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [456, 457])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\run_system_test.py",
+      "lines": [
+        463,
+        464
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [463, 464])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "HIGH_COMPLEXITY",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework.py",
+      "function": "extract_monthly_data",
+      "line": 193,
+      "complexity": 14,
+      "threshold": 10,
+      "message": "함수 extract_monthly_data의 복잡도가 높습니다 (14)",
+      "severity": "MEDIUM",
+      "recommendation": "함수를 더 작은 단위로 분할하세요"
+    },
+    {
+      "type": "HIGH_COMPLEXITY",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework.py",
+      "function": "verify_period_consistency",
+      "line": 425,
+      "complexity": 11,
+      "threshold": 10,
+      "message": "함수 verify_period_consistency의 복잡도가 높습니다 (11)",
+      "severity": "MEDIUM",
+      "recommendation": "함수를 더 작은 단위로 분할하세요"
+    },
+    {
+      "type": "LONG_FUNCTION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework.py",
+      "function": "extract_monthly_data",
+      "line": 193,
+      "length": 70,
+      "threshold": 50,
+      "message": "함수 extract_monthly_data이 너무 깁니다 (70줄)",
+      "severity": "MEDIUM",
+      "recommendation": "함수를 더 작은 단위로 분할하세요"
+    },
+    {
+      "type": "LONG_FUNCTION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework.py",
+      "function": "detect_cross_contamination",
+      "line": 280,
+      "length": 54,
+      "threshold": 50,
+      "message": "함수 detect_cross_contamination이 너무 깁니다 (54줄)",
+      "severity": "MEDIUM",
+      "recommendation": "함수를 더 작은 단위로 분할하세요"
+    },
+    {
+      "type": "LONG_FUNCTION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework.py",
+      "function": "validate_account_data",
+      "line": 476,
+      "length": 59,
+      "threshold": 50,
+      "message": "함수 validate_account_data이 너무 깁니다 (59줄)",
+      "severity": "MEDIUM",
+      "recommendation": "함수를 더 작은 단위로 분할하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework.py",
+      "lines": [
+        104,
+        105
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [104, 105])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework.py",
+      "lines": [
+        147,
+        148
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [147, 148])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework.py",
+      "lines": [
+        164,
+        181
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [164, 181])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework.py",
+      "lines": [
+        250,
+        251
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [250, 251])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework.py",
+      "lines": [
+        253,
+        254
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [253, 254])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework.py",
+      "lines": [
+        302,
+        315
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [302, 315])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework.py",
+      "lines": [
+        303,
+        316
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [303, 316])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework.py",
+      "lines": [
+        304,
+        317
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [304, 317])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework.py",
+      "lines": [
+        305,
+        318
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [305, 318])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework.py",
+      "lines": [
+        333,
+        334
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [333, 334])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework.py",
+      "lines": [
+        336,
+        337
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [336, 337])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework.py",
+      "lines": [
+        410,
+        411
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [410, 411])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework.py",
+      "lines": [
+        419,
+        420
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [419, 420])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework.py",
+      "lines": [
+        455,
+        456
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [455, 456])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework.py",
+      "lines": [
+        579,
+        580
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [579, 580])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework.py",
+      "lines": [
+        582,
+        583
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [582, 583])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework.py",
+      "lines": [
+        585,
+        586
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [585, 586])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework.py",
+      "lines": [
+        588,
+        589
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [588, 589])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework.py",
+      "lines": [
+        591,
+        592
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [591, 592])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework.py",
+      "lines": [
+        594,
+        595
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [594, 595])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework.py",
+      "lines": [
+        597,
+        598
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [597, 598])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework.py",
+      "lines": [
+        606,
+        607
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [606, 607])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework.py",
+      "lines": [
+        713,
+        714
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [713, 714])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework.py",
+      "lines": [
+        824,
+        825
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [824, 825])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "HIGH_COMPLEXITY",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework_backup_20250821_115942.py",
+      "function": "extract_monthly_data",
+      "line": 193,
+      "complexity": 14,
+      "threshold": 10,
+      "message": "함수 extract_monthly_data의 복잡도가 높습니다 (14)",
+      "severity": "MEDIUM",
+      "recommendation": "함수를 더 작은 단위로 분할하세요"
+    },
+    {
+      "type": "LONG_FUNCTION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework_backup_20250821_115942.py",
+      "function": "extract_monthly_data",
+      "line": 193,
+      "length": 70,
+      "threshold": 50,
+      "message": "함수 extract_monthly_data이 너무 깁니다 (70줄)",
+      "severity": "MEDIUM",
+      "recommendation": "함수를 더 작은 단위로 분할하세요"
+    },
+    {
+      "type": "LONG_FUNCTION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework_backup_20250821_115942.py",
+      "function": "detect_cross_contamination",
+      "line": 280,
+      "length": 53,
+      "threshold": 50,
+      "message": "함수 detect_cross_contamination이 너무 깁니다 (53줄)",
+      "severity": "MEDIUM",
+      "recommendation": "함수를 더 작은 단위로 분할하세요"
+    },
+    {
+      "type": "LONG_FUNCTION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework_backup_20250821_115942.py",
+      "function": "validate_account_data",
+      "line": 349,
+      "length": 59,
+      "threshold": 50,
+      "message": "함수 validate_account_data이 너무 깁니다 (59줄)",
+      "severity": "MEDIUM",
+      "recommendation": "함수를 더 작은 단위로 분할하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework_backup_20250821_115942.py",
+      "lines": [
+        104,
+        105
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [104, 105])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework_backup_20250821_115942.py",
+      "lines": [
+        147,
+        148
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [147, 148])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework_backup_20250821_115942.py",
+      "lines": [
+        164,
+        181
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [164, 181])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework_backup_20250821_115942.py",
+      "lines": [
+        250,
+        251
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [250, 251])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework_backup_20250821_115942.py",
+      "lines": [
+        253,
+        254
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [253, 254])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework_backup_20250821_115942.py",
+      "lines": [
+        302,
+        315
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [302, 315])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework_backup_20250821_115942.py",
+      "lines": [
+        303,
+        316
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [303, 316])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework_backup_20250821_115942.py",
+      "lines": [
+        304,
+        317
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [304, 317])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework_backup_20250821_115942.py",
+      "lines": [
+        305,
+        318
+      ],
+      "pattern_length": 3,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [305, 318])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework_backup_20250821_115942.py",
+      "lines": [
+        452,
+        453
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [452, 453])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework_backup_20250821_115942.py",
+      "lines": [
+        455,
+        456
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [455, 456])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework_backup_20250821_115942.py",
+      "lines": [
+        458,
+        459
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [458, 459])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework_backup_20250821_115942.py",
+      "lines": [
+        461,
+        462
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [461, 462])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework_backup_20250821_115942.py",
+      "lines": [
+        464,
+        465
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [464, 465])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework_backup_20250821_115942.py",
+      "lines": [
+        467,
+        468
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [467, 468])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework_backup_20250821_115942.py",
+      "lines": [
+        470,
+        471
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [470, 471])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework_backup_20250821_115942.py",
+      "lines": [
+        479,
+        480
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [479, 480])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework_backup_20250821_115942.py",
+      "lines": [
+        586,
+        587
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [586, 587])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "CODE_DUPLICATION",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework_backup_20250821_115942.py",
+      "lines": [
+        697,
+        698
+      ],
+      "pattern_length": 2,
+      "message": "중복 코드가 2곳에서 발견됨 (라인: [697, 698])",
+      "severity": "LOW",
+      "recommendation": "공통 함수로 추출하여 DRY 원칙을 적용하세요"
+    },
+    {
+      "type": "LARGE_FILE_PROCESSING",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "line": 127,
+      "message": "Excel 파일 전체 로드 감지",
+      "severity": "LOW",
+      "recommendation": "대용량 파일의 경우 청크 단위 처리를 고려하세요"
+    },
+    {
+      "type": "LARGE_FILE_PROCESSING",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor.py",
+      "line": 1294,
+      "message": "Excel 파일 전체 로드 감지",
+      "severity": "LOW",
+      "recommendation": "대용량 파일의 경우 청크 단위 처리를 고려하세요"
+    },
+    {
+      "type": "LARGE_FILE_PROCESSING",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "line": 127,
+      "message": "Excel 파일 전체 로드 감지",
+      "severity": "LOW",
+      "recommendation": "대용량 파일의 경우 청크 단위 처리를 고려하세요"
+    },
+    {
+      "type": "LARGE_FILE_PROCESSING",
+      "file": "C:\\K04_cashflow_1\\Script\\main_processor_backup_20250821_115848.py",
+      "line": 1179,
+      "message": "Excel 파일 전체 로드 감지",
+      "severity": "LOW",
+      "recommendation": "대용량 파일의 경우 청크 단위 처리를 고려하세요"
+    },
+    {
+      "type": "CLAUDE_RULE_VIOLATION",
+      "rule": "NO_NEW_FILES",
+      "file": "Script/main_processor_backup_20250821_115848.py",
+      "message": "새로운 Python 파일 생성 감지: Script/main_processor_backup_20250821_115848.py",
+      "severity": "HIGH",
+      "recommendation": "기존 스크립트를 확장하거나 사용자 승인을 받으세요"
+    },
+    {
+      "type": "CLAUDE_RULE_VIOLATION",
+      "rule": "NO_NEW_FILES",
+      "file": "Script/test_suite_backup_20250821_120003.py",
+      "message": "새로운 Python 파일 생성 감지: Script/test_suite_backup_20250821_120003.py",
+      "severity": "HIGH",
+      "recommendation": "기존 스크립트를 확장하거나 사용자 승인을 받으세요"
+    },
+    {
+      "type": "CLAUDE_RULE_VIOLATION",
+      "rule": "NO_NEW_FILES",
+      "file": "Script/validation_framework_backup_20250821_115942.py",
+      "message": "새로운 Python 파일 생성 감지: Script/validation_framework_backup_20250821_115942.py",
+      "severity": "HIGH",
+      "recommendation": "기존 스크립트를 확장하거나 사용자 승인을 받으세요"
+    },
+    {
+      "type": "CLAUDE_RULE_VIOLATION",
+      "rule": "YELLOW_MARKING",
+      "file": "C:\\K04_cashflow_1\\Script\\batch_processor.py",
+      "message": "불확실한 데이터 마킹 시스템 미사용",
+      "severity": "LOW",
+      "recommendation": "불확실한 데이터는 노란색(#FFFF00)으로 마킹하세요"
+    },
+    {
+      "type": "CLAUDE_RULE_VIOLATION",
+      "rule": "YELLOW_MARKING",
+      "file": "C:\\K04_cashflow_1\\Script\\logging_system.py",
+      "message": "불확실한 데이터 마킹 시스템 미사용",
+      "severity": "LOW",
+      "recommendation": "불확실한 데이터는 노란색(#FFFF00)으로 마킹하세요"
+    },
+    {
+      "type": "CLAUDE_RULE_VIOLATION",
+      "rule": "YELLOW_MARKING",
+      "file": "C:\\K04_cashflow_1\\Script\\mcp_interface.py",
+      "message": "불확실한 데이터 마킹 시스템 미사용",
+      "severity": "LOW",
+      "recommendation": "불확실한 데이터는 노란색(#FFFF00)으로 마킹하세요"
+    },
+    {
+      "type": "CLAUDE_RULE_VIOLATION",
+      "rule": "DATA_INTEGRITY",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework.py",
+      "line": 464,
+      "message": "추정값/기본값 사용 패턴 발견",
+      "severity": "MEDIUM",
+      "recommendation": "확실하지 않은 데이터는 빈 값으로 두고 노란색 마킹하세요"
+    },
+    {
+      "type": "CLAUDE_RULE_VIOLATION",
+      "rule": "DATA_INTEGRITY",
+      "file": "C:\\K04_cashflow_1\\Script\\validation_framework_backup_20250821_115942.py",
+      "line": 337,
+      "message": "추정값/기본값 사용 패턴 발견",
+      "severity": "MEDIUM",
+      "recommendation": "확실하지 않은 데이터는 빈 값으로 두고 노란색 마킹하세요"
+    },
+    {
+      "type": "CLAUDE_RULE_VIOLATION",
+      "rule": "LOGGING_REQUIRED",
+      "file": "C:\\K04_cashflow_1\\Script\\mcp_interface.py",
+      "message": "로깅 시스템 미사용",
+      "severity": "MEDIUM",
+      "recommendation": "UTF8LoggingSystem을 사용하여 로깅을 추가하세요"
+    }
+  ],
+  "recommendations": [
+    "복잡도가 높은 함수들을 더 작은 단위로 분할하세요.",
+    "CLAUDE.md 규칙을 다시 검토하고 준수하세요.",
+    "많은 이슈가 발견되었습니다. 체계적인 리팩토링이 필요합니다."
+  ],
+  "compliance_status": {
+    "claude_md_violations": 9,
+    "critical_security_issues": 3,
+    "data_integrity_score": 10
+  }
+}

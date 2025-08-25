@@ -1,0 +1,774 @@
+{
+  "master": {
+    "tasks": [
+      {
+        "id": 1,
+        "title": "Enhanced Time Series Data Validation Module",
+        "description": "Extend existing validation_framework.py to add comprehensive time series validation including year-over-year continuity checks and carry-forward balance verification",
+        "status": "pending",
+        "dependencies": [],
+        "priority": "high",
+        "details": "Enhance the DataValidator class with methods for: validate_time_series_continuity(), validate_carry_forward_balances(), detect_period_anomalies(), and validate_fiscal_year_boundaries(). Integrate with existing yellow marking system for uncertain data. Add comprehensive logging using existing UTF8LoggingSystem.",
+        "testStrategy": "Unit tests in test_suite.py for time series validation methods. Test with sample multi-year financial data including edge cases like fiscal year changes and period gaps.",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Implement Core Time Series Continuity Validation",
+            "description": "Add validate_time_series_continuity() method to DataValidator class for checking data consistency across time periods",
+            "dependencies": [],
+            "details": "Implement validate_time_series_continuity() method in validation_framework.py DataValidator class. Check for missing periods, validate sequential date ranges, detect gaps in time series data, and ensure proper chronological ordering. Integrate with existing yellow marking system for flagging discontinuities.",
+            "status": "pending",
+            "testStrategy": ""
+          },
+          {
+            "id": 2,
+            "title": "Develop Carry-Forward Balance Verification",
+            "description": "Create validate_carry_forward_balances() method to verify beginning balances match previous period ending balances",
+            "dependencies": [
+              "1.1"
+            ],
+            "details": "Implement validate_carry_forward_balances() method to verify that opening balances for each period match the closing balances of the previous period. Handle multi-year transitions and account for adjustments. Use existing contamination_alerts system for balance mismatches.",
+            "status": "pending",
+            "testStrategy": ""
+          },
+          {
+            "id": 3,
+            "title": "Build Period Anomaly Detection System",
+            "description": "Implement detect_period_anomalies() method for identifying unusual patterns in time series data",
+            "dependencies": [
+              "1.1"
+            ],
+            "details": "Create detect_period_anomalies() method using statistical analysis to identify outliers, sudden changes, and pattern breaks in financial time series. Implement configurable thresholds for anomaly detection sensitivity. Mark anomalous data points with yellow highlighting.",
+            "status": "pending",
+            "testStrategy": ""
+          },
+          {
+            "id": 4,
+            "title": "Create Fiscal Year Boundary Validation",
+            "description": "Add validate_fiscal_year_boundaries() method to handle fiscal year transitions and boundary validations",
+            "dependencies": [
+              "1.2"
+            ],
+            "details": "Implement validate_fiscal_year_boundaries() method to validate proper fiscal year transitions, handle year-end closing entries, and verify period alignment. Account for different fiscal year calendars and ensure proper boundary detection for financial reporting periods.",
+            "status": "pending",
+            "testStrategy": ""
+          },
+          {
+            "id": 5,
+            "title": "Integrate UTF8LoggingSystem for Time Series Validation",
+            "description": "Enhance existing UTF8LoggingSystem integration to support comprehensive time series validation logging",
+            "dependencies": [
+              "1.1",
+              "1.2",
+              "1.3",
+              "1.4"
+            ],
+            "details": "Extend the existing UTF8LoggingSystem integration to log all time series validation activities. Add structured logging for continuity checks, balance verifications, anomaly detections, and fiscal year validations. Ensure all validation results are properly recorded in ./log/ directory with UTF-8 encoding.",
+            "status": "pending",
+            "testStrategy": ""
+          },
+          {
+            "id": 6,
+            "title": "Develop Comprehensive Test Suite for Time Series Validation",
+            "description": "Create unit tests in test_suite.py for all time series validation methods with edge case coverage",
+            "dependencies": [
+              "1.5"
+            ],
+            "details": "Add comprehensive unit tests to test_suite.py covering all new time series validation methods. Include tests for edge cases like fiscal year changes, period gaps, balance mismatches, and anomaly scenarios. Test integration with yellow marking system and UTF8LoggingSystem. Include sample multi-year financial data for testing.",
+            "status": "pending",
+            "testStrategy": ""
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Account Code Mapping Validation System",
+        "description": "Develop comprehensive account code validation system building on existing BS/PL classification in validation_framework.py",
+        "status": "pending",
+        "dependencies": [
+          1
+        ],
+        "priority": "high",
+        "details": "Extend existing bs_accounts dictionary and add methods: validate_account_code_consistency(), track_account_changes(), validate_sub_account_hierarchy(), and verify_code_name_mapping(). Implement account change detection with historical tracking. Use existing contamination_alerts system for inconsistencies.",
+        "testStrategy": "Create test cases for account code validation including code-name mismatches, hierarchy violations, and historical changes. Integration tests with existing TestValidationFramework class.",
+        "subtasks": []
+      },
+      {
+        "id": 3,
+        "title": "Debit/Credit Balance Verification Engine",
+        "description": "Implement comprehensive debit/credit balance validation system with transaction-level and aggregate-level checks",
+        "status": "pending",
+        "dependencies": [
+          1,
+          2
+        ],
+        "priority": "high",
+        "details": "Add new validation methods: validate_debit_credit_balance(), verify_transaction_balance(), validate_monthly_totals(), and check_cumulative_balances(). Implement balance reconciliation with tolerance thresholds. Integrate with existing processed_accounts tracking system and yellow marking for discrepancies.",
+        "testStrategy": "Unit tests for balance validation logic including edge cases like rounding differences. Integration tests with sample ledger data including unbalanced transactions.",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Transaction-Level Balance Verification",
+            "description": "Implement individual transaction debit/credit balance validation with basic reconciliation logic",
+            "dependencies": [],
+            "details": "Create validate_debit_credit_balance() method to verify individual transaction balance integrity. Implement verify_transaction_balance() for single transaction validation. Include basic validation rules for debit/credit equality and transaction completeness checks.",
+            "status": "pending",
+            "testStrategy": ""
+          },
+          {
+            "id": 2,
+            "title": "Aggregate-Level Balance Checks",
+            "description": "Develop comprehensive aggregate balance validation across multiple transactions and accounts",
+            "dependencies": [
+              "3.1"
+            ],
+            "details": "Build aggregate validation system to check balance consistency across grouped transactions. Implement account-level balance verification and cross-account balance reconciliation. Include validation for account hierarchies and parent-child balance relationships.",
+            "status": "pending",
+            "testStrategy": ""
+          },
+          {
+            "id": 3,
+            "title": "Monthly Totals Validation System",
+            "description": "Create monthly balance validation and period-end reconciliation functionality",
+            "dependencies": [
+              "3.2"
+            ],
+            "details": "Implement validate_monthly_totals() method for period-based balance verification. Create month-end closing balance checks and opening balance validation for subsequent periods. Include monthly summary balance reconciliation logic.",
+            "status": "pending",
+            "testStrategy": ""
+          },
+          {
+            "id": 4,
+            "title": "Cumulative Balance Verification",
+            "description": "Develop running balance validation and cumulative total verification system",
+            "dependencies": [
+              "3.3"
+            ],
+            "details": "Create check_cumulative_balances() method for running balance validation across time periods. Implement progressive balance verification from transaction inception to current state. Include historical balance integrity checks and timeline consistency validation.",
+            "status": "pending",
+            "testStrategy": ""
+          },
+          {
+            "id": 5,
+            "title": "Tolerance Threshold Implementation",
+            "description": "Build configurable tolerance system for handling rounding differences and acceptable variances",
+            "dependencies": [
+              "3.4"
+            ],
+            "details": "Implement configurable tolerance thresholds for balance reconciliation. Create rounding difference handling logic and acceptable variance parameters. Include precision-based validation rules and currency-specific tolerance settings.",
+            "status": "pending",
+            "testStrategy": ""
+          },
+          {
+            "id": 6,
+            "title": "Integration with Tracking and Marking Systems",
+            "description": "Integrate balance verification with existing processed_accounts tracking and yellow marking for discrepancies",
+            "dependencies": [
+              "3.5"
+            ],
+            "details": "Connect balance verification engine with existing processed_accounts tracking system. Implement yellow marking integration for balance discrepancies using existing Excel formatting system. Create comprehensive reporting and tracking for validation results.",
+            "status": "pending",
+            "testStrategy": ""
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Data Quality Metrics Dashboard",
+        "description": "Develop comprehensive quality metrics system building on existing processing_stats in main_processor.py",
+        "status": "pending",
+        "dependencies": [
+          1,
+          2,
+          3
+        ],
+        "priority": "medium",
+        "details": "Extend MainProcessor.processing_stats with quality metrics: accuracy_score, coverage_percentage, validation_pass_rate, and anomaly_detection_rate. Implement quality_metrics_calculator() method and integrate with existing batch reporting system. Add trend analysis for quality metrics over time.",
+        "testStrategy": "Unit tests for quality metric calculations. Integration tests verifying metrics accuracy against known datasets. Performance tests ensuring metrics calculation doesn't impact processing time.",
+        "subtasks": []
+      },
+      {
+        "id": 5,
+        "title": "Advanced Anomaly Detection Algorithms",
+        "description": "Implement statistical anomaly detection for financial data patterns using existing validation framework",
+        "status": "pending",
+        "dependencies": [
+          1
+        ],
+        "priority": "medium",
+        "details": "Add anomaly detection methods to DataValidator: detect_statistical_outliers(), identify_pattern_breaks(), and analyze_seasonal_variations(). Use existing contamination_alerts system for anomaly reporting. Implement configurable sensitivity thresholds and false positive reduction.",
+        "testStrategy": "Statistical tests with known anomalous data patterns. Performance tests ensuring anomaly detection completes within time constraints. False positive rate validation tests.",
+        "subtasks": []
+      },
+      {
+        "id": 6,
+        "title": "Performance Optimization Module",
+        "description": "Optimize existing batch processing system to meet PRD performance requirements (<1 hour daily processing, >1000 records/second)",
+        "status": "pending",
+        "dependencies": [
+          4
+        ],
+        "priority": "high",
+        "details": "Enhance BatchProcessor with performance optimizations: parallel processing for validation tasks, memory-efficient data streaming, and optimized Excel operations. Add performance monitoring to existing logging system. Implement adaptive batch sizing based on data complexity.",
+        "testStrategy": "Performance benchmarks with large datasets. Memory usage profiling. Stress testing with maximum daily data volumes. Regression tests ensuring optimizations don't break existing functionality.",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Implement Parallel Processing Framework",
+            "description": "Design and implement concurrent processing capabilities for validation tasks using Python's multiprocessing and threading modules",
+            "dependencies": [],
+            "details": "Create ThreadPoolExecutor and ProcessPoolExecutor implementations for CPU and I/O bound validation tasks. Implement task queue management, worker pool sizing based on system resources, and error handling for concurrent operations. Ensure thread-safe operations with existing validation framework.",
+            "status": "pending",
+            "testStrategy": ""
+          },
+          {
+            "id": 2,
+            "title": "Develop Memory-Efficient Data Streaming",
+            "description": "Implement streaming data processing to handle large datasets without excessive memory consumption",
+            "dependencies": [
+              "6.1"
+            ],
+            "details": "Create data streaming utilities using generators and iterators for processing large Excel files. Implement chunked data processing, lazy loading mechanisms, and memory usage monitoring. Optimize pandas operations to use minimal memory footprint while maintaining data integrity.",
+            "status": "pending",
+            "testStrategy": ""
+          },
+          {
+            "id": 3,
+            "title": "Optimize Excel Operations Performance",
+            "description": "Enhance Excel reading/writing operations for improved performance and reduced I/O overhead",
+            "dependencies": [],
+            "details": "Implement optimized Excel operations using openpyxl performance features, bulk operations, and efficient data structures. Add connection pooling for Excel files, optimize cell formatting operations, and implement smart caching for frequently accessed ranges.",
+            "status": "pending",
+            "testStrategy": ""
+          },
+          {
+            "id": 4,
+            "title": "Integrate Performance Monitoring System",
+            "description": "Add comprehensive performance metrics collection to existing logging infrastructure",
+            "dependencies": [
+              "6.1",
+              "6.2",
+              "6.3"
+            ],
+            "details": "Extend UTF8LoggingSystem with performance metrics: processing time tracking, memory usage monitoring, throughput measurements, and bottleneck identification. Create performance dashboards and alerts for system administrators.",
+            "status": "pending",
+            "testStrategy": ""
+          },
+          {
+            "id": 5,
+            "title": "Implement Adaptive Batch Sizing Algorithm",
+            "description": "Create intelligent batch sizing system that adjusts based on data complexity and system resources",
+            "dependencies": [
+              "6.2",
+              "6.4"
+            ],
+            "details": "Develop adaptive algorithms that analyze data complexity, available system resources, and historical performance to optimize batch sizes dynamically. Implement feedback loops and machine learning-based optimization for continuous improvement.",
+            "status": "pending",
+            "testStrategy": ""
+          },
+          {
+            "id": 6,
+            "title": "Create Performance Benchmarking Suite",
+            "description": "Develop comprehensive benchmarking tools to measure and validate performance improvements",
+            "dependencies": [
+              "6.4",
+              "6.5"
+            ],
+            "details": "Build automated benchmarking suite with standardized test datasets, performance baseline establishment, and regression detection. Create comparison tools for before/after optimization analysis and generate detailed performance reports.",
+            "status": "pending",
+            "testStrategy": ""
+          },
+          {
+            "id": 7,
+            "title": "Execute Performance Regression Testing",
+            "description": "Conduct thorough regression testing to ensure optimizations don't break existing functionality",
+            "dependencies": [
+              "6.1",
+              "6.2",
+              "6.3",
+              "6.5",
+              "6.6"
+            ],
+            "details": "Run comprehensive test suite covering all existing functionality with new performance optimizations. Validate data integrity, error handling, and system stability under various load conditions. Document any compatibility issues and implement fixes.",
+            "status": "pending",
+            "testStrategy": ""
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "title": "Enhanced Error Recovery System",
+        "description": "Develop robust error recovery and data integrity protection building on existing error handling",
+        "status": "pending",
+        "dependencies": [
+          3,
+          6
+        ],
+        "priority": "high",
+        "details": "Enhance existing error handling with: automatic_recovery_procedures(), data_backup_validation(), rollback_mechanisms(), and integrity_verification_after_recovery(). Integrate with existing UTF8LoggingSystem for detailed error tracking. Add checkpoints for long-running processes.",
+        "testStrategy": "Fault injection testing with various error scenarios. Recovery time measurement tests. Data integrity verification after recovery operations. Backup and restore functionality tests.",
+        "subtasks": []
+      },
+      {
+        "id": 8,
+        "title": "Comprehensive Integration Testing Framework",
+        "description": "Extend existing test_suite.py with comprehensive integration tests covering all validation modules",
+        "status": "pending",
+        "dependencies": [
+          1,
+          2,
+          3
+        ],
+        "priority": "medium",
+        "details": "Add integration test classes: TestTimeSeriesValidation, TestAccountCodeValidation, TestDebitCreditValidation, and TestEndToEndProcessing. Create test data generators for various scenarios. Implement automated test reporting with existing logging system.",
+        "testStrategy": "Integration tests covering all validation workflows. End-to-end processing tests with realistic financial datasets. Automated test execution and reporting validation.",
+        "subtasks": []
+      },
+      {
+        "id": 9,
+        "title": "Real-time Validation Monitoring System",
+        "description": "Implement real-time monitoring and alerting system for validation processes",
+        "status": "pending",
+        "dependencies": [
+          4,
+          7
+        ],
+        "priority": "medium",
+        "details": "Extend existing logging system with real-time monitoring capabilities: process_health_monitor(), validation_status_tracker(), and alert_notification_system(). Integrate with existing MCP interface for external notifications. Add configurable thresholds for automatic alerts.",
+        "testStrategy": "Real-time monitoring tests with simulated validation scenarios. Alert notification testing with various threshold configurations. Performance impact assessment of monitoring overhead.",
+        "subtasks": []
+      },
+      {
+        "id": 10,
+        "title": "Data Completeness Validation Engine",
+        "description": "Develop comprehensive data completeness checking system aligned with CLAUDE.md data integrity principles",
+        "status": "pending",
+        "dependencies": [
+          1,
+          2
+        ],
+        "priority": "high",
+        "details": "Add data completeness validation methods: check_required_fields(), validate_data_coverage(), identify_missing_periods(), and verify_complete_transactions(). Integrate with existing yellow marking system for incomplete data. Implement completeness scoring algorithms.",
+        "testStrategy": "Completeness validation tests with datasets having various levels of missing data. Edge case testing for partial transactions and missing periods.",
+        "subtasks": []
+      },
+      {
+        "id": 11,
+        "title": "Advanced Reporting and Documentation System",
+        "description": "Enhance existing reporting capabilities with comprehensive validation reports and documentation",
+        "status": "pending",
+        "dependencies": [
+          4,
+          8
+        ],
+        "priority": "medium",
+        "details": "Extend existing batch reporting system with: comprehensive_validation_reports(), quality_trend_analysis(), exception_summaries(), and automated_documentation_generation(). Create templates for various report types. Integrate with existing session summary functionality.",
+        "testStrategy": "Report generation tests with various data scenarios. Template validation tests. Documentation accuracy verification tests.",
+        "subtasks": []
+      },
+      {
+        "id": 12,
+        "title": "Configuration Management Enhancement",
+        "description": "Enhance existing configuration system with validation-specific settings and rule management",
+        "status": "pending",
+        "dependencies": [
+          5,
+          10
+        ],
+        "priority": "low",
+        "details": "Extend existing config loading system with validation-specific configurations: validation_rules_config(), threshold_settings(), alert_configurations(), and processing_parameters(). Implement configuration validation and hot-reloading capabilities.",
+        "testStrategy": "Configuration loading and validation tests. Hot-reload functionality tests. Invalid configuration handling tests.",
+        "subtasks": []
+      },
+      {
+        "id": 13,
+        "title": "Security and Access Control Integration",
+        "description": "Implement security enhancements building on Claude Code authentication requirements",
+        "status": "pending",
+        "dependencies": [
+          9,
+          11
+        ],
+        "priority": "medium",
+        "details": "Integrate security features with existing system: session_management_enhancement(), access_control_validation(), audit_trail_generation(), and secure_data_handling(). Ensure compliance with existing UTF-8 encoding and data integrity principles.",
+        "testStrategy": "Security validation tests including access control scenarios. Audit trail verification tests. Session management functionality tests.",
+        "subtasks": []
+      },
+      {
+        "id": 14,
+        "title": "System Integration and Final Optimization",
+        "description": "Complete system integration ensuring all components work seamlessly together with optimal performance",
+        "status": "pending",
+        "dependencies": [
+          6,
+          7,
+          12,
+          13
+        ],
+        "priority": "high",
+        "details": "Final integration of all validation modules with existing MainProcessor. Optimize inter-component communication, resolve any integration issues, and ensure system meets all PRD performance requirements. Update existing batch processing workflow to incorporate all new validation features.",
+        "testStrategy": "End-to-end system integration tests. Performance validation against PRD requirements. Stress testing with maximum expected data volumes.",
+        "subtasks": []
+      },
+      {
+        "id": 15,
+        "title": "Production Deployment and Monitoring Setup",
+        "description": "Prepare system for production deployment with monitoring, logging, and maintenance procedures",
+        "status": "pending",
+        "dependencies": [
+          14
+        ],
+        "priority": "medium",
+        "details": "Finalize production configuration, setup monitoring dashboards using existing logging infrastructure, create maintenance procedures, and prepare deployment documentation. Ensure all TaskMaster framework requirements are met and system is ready for daily production use.",
+        "testStrategy": "Production readiness testing including deployment procedures. Monitoring system validation. Maintenance procedure verification tests.",
+        "subtasks": []
+      }
+    ],
+    "metadata": {
+      "created": "2025-08-21T08:51:44.838Z",
+      "updated": "2025-08-21T08:51:44.839Z",
+      "description": "Tasks for master context"
+    }
+  },
+  "spec-v2": {
+    "tasks": [
+      {
+        "id": 1,
+        "title": "Analyze Existing Documentation and System Assessment",
+        "description": "Comprehensive review of existing analysis reports, implementation plans, and current system evaluation to establish baseline requirements",
+        "status": "pending",
+        "dependencies": [],
+        "priority": "high",
+        "details": "Conduct thorough analysis of existing 원장분석결과, 데이터정형화 구현계획서, and CLAUDE.md principles. Document current system capabilities, limitations, and data flow patterns. Create comprehensive system inventory including data sources, processing logic, and output formats. Use structured analysis framework to identify gaps and improvement opportunities. Establish baseline metrics for performance comparison.",
+        "testStrategy": "Create verification checklist for each document reviewed. Cross-reference findings with actual system behavior. Document all identified issues with severity ratings and impact assessment.",
+        "subtasks": []
+      },
+      {
+        "id": 2,
+        "title": "Design Enhanced System Architecture",
+        "description": "Design improved system architecture incorporating UTF-8 standardization, unified logging, and performance optimization requirements",
+        "status": "pending",
+        "dependencies": [
+          1
+        ],
+        "priority": "high",
+        "details": "Design modular architecture using Python 3.11+ with asyncio for performance optimization. Implement centralized configuration management using Pydantic v2 for type-safe settings. Design UTF-8 encoding standards across all components using pandas 2.1+ with explicit encoding='utf-8' parameters. Create unified logging framework using structlog for JSON-structured logs with correlation IDs. Design error handling policy using custom exception hierarchy with graceful degradation patterns.",
+        "testStrategy": "Create architecture decision records (ADRs) for each major design choice. Validate design through proof-of-concept implementations. Conduct performance modeling for expected data volumes.",
+        "subtasks": []
+      },
+      {
+        "id": 3,
+        "title": "Implement Advanced Date Processing and 2025 Compatibility",
+        "description": "Redesign date-based monthly data classification system with enhanced 전기이월 logic for 2025 compatibility",
+        "status": "pending",
+        "dependencies": [
+          2
+        ],
+        "priority": "high",
+        "details": "Implement flexible date parsing using dateutil and pandas.to_datetime with multiple format support including Korean date formats. Create 전기이월 recognition system using business rule engine with configurable year-end cutoff dates. Design monthly data segmentation using fiscal calendar logic with timezone awareness. Implement date validation pipeline using Pydantic validators for date range checks and format validation. Add support for Korean fiscal year patterns and holiday calendars.",
+        "testStrategy": "Create comprehensive test suite covering edge cases like leap years, fiscal year boundaries, and Korean holidays. Test with historical data from 2023-2025 transition period. Validate accuracy against manual calculations.",
+        "subtasks": []
+      },
+      {
+        "id": 4,
+        "title": "Build Three-Tier Validation Framework",
+        "description": "Implement comprehensive 3-stage validation system: Python basic validation, MCP pattern analysis, and Python final verification",
+        "status": "pending",
+        "dependencies": [
+          2
+        ],
+        "priority": "high",
+        "details": "Stage 1: Implement basic Python validation using Pydantic models with custom validators for financial data types, range checks, and mandatory field validation. Stage 2: Design MCP (Model-Control-Pattern) analysis module using scikit-learn for anomaly detection and pattern recognition on financial transactions. Stage 3: Create final verification layer using Great Expectations for comprehensive data quality assertions and cross-validation rules. Implement validation result aggregation with severity scoring and automated remediation suggestions.",
+        "testStrategy": "Design test cases for each validation stage with known good/bad data samples. Measure validation accuracy, false positive rates, and performance benchmarks. Create regression test suite for validation logic changes.",
+        "subtasks": []
+      },
+      {
+        "id": 5,
+        "title": "Develop Automated VAT Processing System",
+        "description": "Create intelligent VAT calculation and classification system with automatic detection and processing capabilities",
+        "status": "pending",
+        "dependencies": [
+          3
+        ],
+        "priority": "medium",
+        "details": "Implement VAT calculation engine using decimal.Decimal for precise financial arithmetic with configurable tax rates (10% standard). Create automatic VAT detection logic using account code patterns (13500 부가세대급금, 25500 부가세예수금) and transaction analysis. Design VAT inclusion/exclusion toggle with audit trail logging. Implement business rule engine for VAT exemption handling (법무, 번역 services). Add support for Korean VAT reporting requirements and reconciliation with 국세청 standards.",
+        "testStrategy": "Create test scenarios covering standard VAT, exempt transactions, and edge cases. Validate calculations against manual VAT computations. Test integration with existing account code structure.",
+        "subtasks": []
+      },
+      {
+        "id": 6,
+        "title": "Implement Data Integrity and Cross-Contamination Prevention",
+        "description": "Build comprehensive data completeness verification and cross-contamination detection mechanisms",
+        "status": "pending",
+        "dependencies": [
+          4
+        ],
+        "priority": "high",
+        "details": "Implement data completeness checks using pandas profiling and custom metrics for missing data patterns. Create cross-contamination detection using data lineage tracking and checksums for each processing stage. Design data isolation boundaries using separate pandas DataFrames with immutable copies for each processing step. Implement automated data quality scoring using configurable metrics (completeness, accuracy, consistency). Add real-time monitoring using data quality dashboards with alerting thresholds.",
+        "testStrategy": "Design controlled contamination scenarios to verify detection accuracy. Test data isolation under various failure conditions. Validate quality metrics against known benchmark datasets.",
+        "subtasks": []
+      },
+      {
+        "id": 7,
+        "title": "Create Enhanced Excel Integration Layer",
+        "description": "Build robust Excel processing system with openpyxl integration, formatting preservation, and error handling",
+        "status": "pending",
+        "dependencies": [
+          5
+        ],
+        "priority": "medium",
+        "details": "Implement Excel processing using openpyxl 3.1+ for full feature support with xlsxwriter for performance-critical operations. Create smart cell formatting preservation using openpyxl.styles with conditional formatting rules. Implement error cell marking system using yellow highlighting (#FFFF00) for data quality issues. Design batch processing capabilities for large Excel files using chunked reading and memory optimization. Add support for Korean Excel formats and regional settings compatibility.",
+        "testStrategy": "Test with various Excel versions and Korean formatting. Validate formatting preservation accuracy. Performance test with large files (>100MB). Test error marking visibility and accuracy.",
+        "subtasks": []
+      },
+      {
+        "id": 8,
+        "title": "Build Performance Optimization and Memory Management",
+        "description": "Implement system performance enhancements targeting <1 hour daily processing and >1000 transactions/second throughput",
+        "status": "pending",
+        "dependencies": [
+          6,
+          7
+        ],
+        "priority": "medium",
+        "details": "Implement pandas optimization using vectorized operations, categorical data types, and memory-efficient dtypes. Create parallel processing using multiprocessing.Pool with optimal worker count based on CPU cores and memory constraints. Design memory management using chunked processing for large datasets with automatic garbage collection. Implement caching layer using Redis or in-memory solutions for frequently accessed data. Add performance monitoring using cProfile and memory_profiler with automated reporting.",
+        "testStrategy": "Conduct performance benchmarking with realistic data volumes. Test memory usage under peak load conditions. Validate processing time targets with various data sizes. Monitor system resource utilization during processing.",
+        "subtasks": []
+      },
+      {
+        "id": 9,
+        "title": "Develop Comprehensive Logging and Monitoring System",
+        "description": "Create unified logging infrastructure with structured logging, real-time monitoring, and automated alerting",
+        "status": "pending",
+        "dependencies": [
+          8
+        ],
+        "priority": "medium",
+        "details": "Implement structured logging using structlog with JSON format for log aggregation. Create log correlation using unique session IDs and transaction tracking across processing stages. Design real-time monitoring dashboard using logging metrics and system health indicators. Implement automated alerting for critical errors, performance degradation, and data quality issues. Add log retention policies and automated log rotation using logrotate integration. Create audit trail functionality for regulatory compliance with immutable log storage.",
+        "testStrategy": "Test logging performance impact under high load. Validate log correlation accuracy across processing stages. Test alert triggering for various error conditions. Verify log retention and rotation functionality.",
+        "subtasks": []
+      },
+      {
+        "id": 10,
+        "title": "Create Data Quality Metrics and Reporting System",
+        "description": "Build automated quality assessment with configurable metrics, scoring algorithms, and comprehensive reporting",
+        "status": "pending",
+        "dependencies": [
+          9
+        ],
+        "priority": "medium",
+        "details": "Define financial data quality dimensions including accuracy, completeness, consistency, timeliness, and validity using industry-standard frameworks. Implement quality scoring algorithms using weighted metrics with configurable thresholds for each dimension. Create automated quality reports using pandas-profiling and custom templates with executive summaries. Design quality trend analysis using historical quality metrics and regression detection. Implement quality gate controls that prevent processing of substandard data with configurable bypass mechanisms for urgent situations.",
+        "testStrategy": "Validate quality metrics against manually assessed data samples. Test quality scoring consistency across different data sets. Verify report accuracy and completeness. Test quality gate effectiveness in preventing bad data propagation.",
+        "subtasks": []
+      },
+      {
+        "id": 11,
+        "title": "Implement Issue Tracking and Resolution System",
+        "description": "Build automated issue detection, classification, tracking, and resolution workflow with escalation procedures",
+        "status": "pending",
+        "dependencies": [
+          10
+        ],
+        "priority": "low",
+        "details": "Create issue classification taxonomy covering data quality, processing errors, validation failures, and system performance issues. Implement automated issue detection using pattern recognition and threshold-based triggers. Design issue tracking workflow using ticket-based system with priority assignment, owner allocation, and resolution tracking. Create escalation procedures for critical issues with automatic notification and deadline management. Implement resolution knowledge base with searchable solutions and automated suggestion engine for common issues.",
+        "testStrategy": "Test issue detection accuracy and false positive rates. Validate issue classification consistency. Test escalation timing and notification delivery. Verify knowledge base search effectiveness and solution accuracy.",
+        "subtasks": []
+      },
+      {
+        "id": 12,
+        "title": "System Integration and Migration Strategy",
+        "description": "Design and implement phased migration approach with backward compatibility, testing procedures, and rollback mechanisms",
+        "status": "pending",
+        "dependencies": [
+          11
+        ],
+        "priority": "medium",
+        "details": "Design phased migration strategy with clear milestones and success criteria for each phase. Implement backward compatibility layer for existing data formats and processing workflows using adapter pattern. Create comprehensive testing procedures including unit tests using pytest, integration tests for end-to-end workflows, and performance regression tests. Design rollback mechanisms with data backup strategies and quick recovery procedures. Implement feature toggles for gradual feature enablement and safe deployment. Create migration documentation and user training materials with Korean language support.",
+        "testStrategy": "Test migration procedures in isolated environment with production data copies. Validate backward compatibility with legacy data formats. Test rollback procedures under various failure scenarios. Verify feature toggle functionality and gradual rollout capabilities.",
+        "subtasks": []
+      }
+    ],
+    "metadata": {
+      "created": "2025-08-22T00:28:39.188Z",
+      "updated": "2025-08-22T00:33:38.844Z",
+      "description": "Tasks for spec-v2 context"
+    }
+  },
+  "fsd-improvement": {
+    "tasks": [
+      {
+        "id": 1,
+        "title": "Create Comprehensive Functional Specification Document",
+        "description": "Develop a detailed functional specification document that clearly separates system concerns into distinct sections covering objectives, requirements, architecture, and validation criteria.",
+        "details": "Create a comprehensive functional specification document structured as follows:\n\n1. **System Overview and Objectives**\n   - Define project purpose and business goals\n   - Identify target users and stakeholders\n   - Establish success metrics and KPIs\n   - Document scope and boundaries\n\n2. **Functional Requirements from User Perspective**\n   - Define user stories and use cases\n   - Specify user interfaces and interactions\n   - Document business rules and workflows\n   - Include input/output specifications\n\n3. **Performance and Quality Requirements**\n   - Define performance benchmarks (response time, throughput)\n   - Specify reliability and availability requirements\n   - Document security and compliance needs\n   - Establish scalability requirements\n\n4. **System Architecture Overview**\n   - High-level system components and their relationships\n   - Data flow diagrams\n   - Technology stack decisions\n   - Integration points and external dependencies\n\n5. **Validation Criteria and Test Scenarios**\n   - Acceptance criteria for each functional requirement\n   - Test scenarios for user workflows\n   - Performance validation methods\n   - Quality assurance checkpoints\n\nThe document should be written in clear, non-technical language where possible, with technical details clearly separated and explained. Use diagrams and flowcharts where helpful for clarity.",
+        "testStrategy": "Review the completed specification document to ensure: 1) All five sections are present and comprehensive, 2) Requirements are testable and measurable, 3) User stories follow proper format (As a [user], I want [goal] so that [benefit]), 4) Architecture diagrams are clear and accurate, 5) Test scenarios cover all major user workflows, 6) Document is reviewed by stakeholders for completeness and accuracy, 7) Validation criteria are specific and verifiable.",
+        "status": "pending",
+        "dependencies": [],
+        "priority": "high",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Create System Overview and Objectives Section",
+            "description": "Define the project's purpose, business goals, target users, stakeholders, success metrics, KPIs, scope, and boundaries in a clear, comprehensive overview section.",
+            "dependencies": [],
+            "details": "Document the fundamental purpose of the system, identify all stakeholder groups (end users, administrators, business owners), establish measurable success criteria and key performance indicators, and clearly define what is included and excluded from the project scope. This section should answer 'why' the system exists and 'who' it serves.",
+            "status": "done",
+            "testStrategy": "Verify that business goals are clearly stated, all stakeholder groups are identified, success metrics are measurable and time-bound, and scope boundaries are unambiguous and complete."
+          },
+          {
+            "id": 2,
+            "title": "Define Functional Requirements from User Perspective",
+            "description": "Create detailed user stories, use cases, interface specifications, business rules, workflows, and input/output requirements that focus on what users need to accomplish.",
+            "dependencies": [
+              "1.1"
+            ],
+            "details": "Write user stories in proper format (As a [user type], I want [functionality] so that [benefit]), create detailed use case scenarios showing step-by-step user interactions, specify user interface requirements and interaction patterns, document business rules and constraints, map out user workflows, and define all system inputs and expected outputs.",
+            "status": "pending",
+            "testStrategy": "Ensure all user stories follow proper format and are testable, use cases cover both happy path and error scenarios, interface specifications are detailed enough for implementation, and all business rules are clearly stated and measurable."
+          },
+          {
+            "id": 3,
+            "title": "Establish Performance and Quality Requirements",
+            "description": "Define specific performance benchmarks, reliability standards, availability requirements, security specifications, compliance needs, and scalability criteria with measurable targets.",
+            "dependencies": [
+              "1.1"
+            ],
+            "details": "Set specific performance targets (response times, throughput, concurrent users), define reliability metrics (uptime percentages, error rates), establish availability requirements (24/7, business hours), document security requirements (authentication, authorization, data protection), specify compliance standards (GDPR, HIPAA, SOX), and define scalability requirements (user growth, data volume growth).",
+            "status": "pending",
+            "testStrategy": "Verify all performance requirements have specific numerical targets, reliability metrics are measurable, security requirements address all relevant threats, compliance needs are accurately documented, and scalability requirements include growth projections."
+          },
+          {
+            "id": 4,
+            "title": "Design System Architecture Overview with Visual Diagrams",
+            "description": "Create high-level system architecture documentation including component diagrams, data flow visualizations, technology stack decisions, and integration specifications.",
+            "dependencies": [
+              "1.2",
+              "1.3"
+            ],
+            "details": "Design system component diagrams showing major modules and their relationships, create data flow diagrams illustrating how information moves through the system, document technology stack choices with justifications, identify all external system integration points, and create visual representations using appropriate diagramming tools (UML, flowcharts, architecture diagrams).",
+            "status": "pending",
+            "testStrategy": "Ensure architecture diagrams are clear and consistent, all major components are represented, data flows are complete and logical, technology choices are justified with pros/cons, and integration points include security and error handling considerations."
+          },
+          {
+            "id": 5,
+            "title": "Develop Validation Criteria and Test Scenarios",
+            "description": "Create comprehensive acceptance criteria, detailed test scenarios for user workflows, performance validation methods, and quality assurance checkpoints for all functional requirements.",
+            "dependencies": [
+              "1.2",
+              "1.3",
+              "1.4"
+            ],
+            "details": "Define specific acceptance criteria for each functional requirement using given/when/then format, create detailed test scenarios covering normal use, edge cases, and error conditions, establish performance testing methods and tools, define quality gates and checkpoints throughout development, and create traceability matrix linking requirements to test cases.",
+            "status": "pending",
+            "testStrategy": "Verify acceptance criteria are specific and testable, test scenarios provide adequate coverage including negative test cases, performance validation methods align with stated requirements, and quality checkpoints are positioned at appropriate development milestones."
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Excel Data Cleansing and CSV Re-extraction Pipeline",
+        "description": "Develop a comprehensive data quality improvement system to cleanse Books/자금수지표_v2_250821.xlsx, restructure it into clean data format, re-extract validated CSV files, and implement verification processes.",
+        "details": "Implement a robust data cleansing pipeline with the following components:\n\n1. **Data Quality Assessment Module**\n   - Create automated Excel file analysis to identify data inconsistencies, missing values, formatting issues\n   - Implement column mapping validation to ensure proper field alignment\n   - Generate data quality reports with statistics on completeness, accuracy, and consistency\n   - Flag potential outliers and anomalous values for manual review\n\n2. **Data Cleansing Engine**\n   - Develop standardized data transformation rules (date formats, number formats, text normalization)\n   - Implement intelligent missing value handling strategies (interpolation, business rule-based defaults)\n   - Create duplicate record detection and resolution logic\n   - Apply data validation rules based on business constraints\n   - Ensure proper encoding handling (UTF-8) for Korean text data\n\n3. **CSV Re-extraction System**\n   - Build configurable CSV export functionality with proper delimiter and encoding settings\n   - Implement column ordering and naming standardization\n   - Create data type preservation mechanisms during export\n   - Generate multiple CSV outputs if different formats are required\n\n4. **Validation and Quality Control**\n   - Develop automated comparison between original and cleansed data\n   - Implement statistical validation (record counts, sum totals, data distribution checks)\n   - Create exception reporting for data that couldn't be automatically cleansed\n   - Generate data lineage documentation showing transformation steps\n\n5. **Error Handling and Logging**\n   - Implement comprehensive logging of all cleansing operations\n   - Create rollback mechanisms for failed operations\n   - Generate detailed error reports with specific row/column references\n   - Ensure data integrity throughout the entire process",
+        "testStrategy": "Validate the data cleansing pipeline through: 1) Unit tests for individual transformation functions with sample data, 2) Integration tests using a subset of the actual Excel file, 3) Data quality verification by comparing statistical measures (row counts, sum totals, unique values) between original and cleansed datasets, 4) Manual spot-checking of cleansed records against business rules, 5) CSV export validation ensuring proper encoding, formatting, and completeness, 6) End-to-end testing with the complete Books/자금수지표_v2_250821.xlsx file, 7) Performance testing to ensure the pipeline can handle the full dataset size, 8) Error handling tests by intentionally introducing corrupted data to verify proper exception handling and logging.",
+        "status": "pending",
+        "dependencies": [
+          1
+        ],
+        "priority": "high",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Excel File Analysis and Problem Identification",
+            "description": "Analyze the Books/자금수지표_v2_250821.xlsx file to identify data quality issues, inconsistencies, missing values, formatting problems, and structural anomalies that need to be addressed in the cleansing process.",
+            "dependencies": [],
+            "details": "Create automated analysis script to scan the Excel file and generate comprehensive report covering: data types inconsistencies, missing value patterns, duplicate records, formatting irregularities, column alignment issues, encoding problems with Korean text, outlier detection, and structural validation of sheets and ranges.",
+            "status": "done",
+            "testStrategy": "Validate analysis accuracy by manually reviewing a sample of identified issues, ensure all data quality metrics are calculated correctly, and verify the generated report contains actionable insights with specific cell references."
+          },
+          {
+            "id": 2,
+            "title": "Data Cleansing Standards and Rules Definition",
+            "description": "Establish comprehensive data cleansing standards, transformation rules, and business logic requirements that will guide the automated cleansing process for financial data consistency.",
+            "dependencies": [
+              "2.1"
+            ],
+            "details": "Define standardized rules for: date format normalization (YYYY-MM-DD), number format standardization, text normalization for Korean characters, missing value handling strategies by data type, duplicate resolution logic, validation constraints based on financial data requirements, and encoding standards (UTF-8).",
+            "status": "done",
+            "testStrategy": "Review rules with domain experts, validate rule logic with sample data transformations, and ensure all edge cases are covered with appropriate fallback mechanisms."
+          },
+          {
+            "id": 3,
+            "title": "Python Data Cleansing Engine Development",
+            "description": "Develop a robust Python script that implements the defined cleansing rules to automatically transform and clean the Excel data while preserving data integrity and maintaining audit trails.",
+            "dependencies": [
+              "2.2"
+            ],
+            "details": "Create modular Python application with functions for: data type conversion, missing value imputation, duplicate detection and removal, format standardization, Korean text encoding normalization, validation rule application, error handling with rollback capabilities, and comprehensive logging of all transformations.",
+            "status": "done",
+            "testStrategy": "Unit test each cleansing function with controlled datasets, integration test with sample Excel data, validate transformation accuracy, and ensure error handling works correctly for edge cases."
+          },
+          {
+            "id": 4,
+            "title": "Cleansed Excel File Generation",
+            "description": "Generate a clean, standardized version of the original Excel file with all identified issues resolved, proper formatting applied, and data integrity maintained throughout the transformation process.",
+            "dependencies": [
+              "2.3"
+            ],
+            "details": "Apply cleansing transformations to create new Excel file with: standardized data formats, resolved missing values, removed duplicates, corrected encoding issues, proper column alignment, maintained sheet structure, and embedded data quality metadata for tracking changes made.",
+            "status": "in-progress",
+            "testStrategy": "Compare record counts and statistical measures between original and cleansed files, validate data integrity through checksums, and ensure all transformations were applied correctly without data loss."
+          },
+          {
+            "id": 5,
+            "title": "CSV Re-extraction and Export System",
+            "description": "Build a configurable CSV extraction system that exports the cleansed data with proper encoding, delimiters, and formatting while maintaining data type integrity and supporting multiple output formats.",
+            "dependencies": [
+              "2.4"
+            ],
+            "details": "Implement CSV export functionality with: UTF-8 encoding for Korean text, configurable delimiters and quote handling, column ordering standardization, data type preservation, header normalization, and support for generating multiple CSV formats based on different requirements.",
+            "status": "pending",
+            "testStrategy": "Validate CSV output format compliance, test with various CSV readers, verify Korean text encoding, ensure data completeness, and validate that numerical precision is maintained."
+          },
+          {
+            "id": 6,
+            "title": "Data Validation and Quality Verification",
+            "description": "Implement comprehensive validation processes to verify data integrity, accuracy, and completeness by comparing original and processed data through statistical analysis and business rule validation.",
+            "dependencies": [
+              "2.5"
+            ],
+            "details": "Create validation framework that performs: record count verification, sum total validation for numerical columns, data distribution comparison, referential integrity checks, business rule validation, outlier detection in cleansed data, and generation of data quality scorecards with before/after metrics.",
+            "status": "pending",
+            "testStrategy": "Test validation logic with known datasets, verify statistical calculations are accurate, ensure all validation rules are properly implemented, and validate that quality scorecards provide meaningful insights."
+          },
+          {
+            "id": 7,
+            "title": "Folder Structure Optimization and Organization",
+            "description": "Reorganize and optimize the project folder structure to support the cleansing pipeline with proper separation of input, output, logs, and configuration files for maintainability and scalability.",
+            "dependencies": [
+              "2.6"
+            ],
+            "details": "Create organized directory structure with: separate folders for original files, cleansed data, CSV outputs, processing logs, configuration files, temporary working files, archive storage, and documentation, along with clear naming conventions and file management policies.",
+            "status": "pending",
+            "testStrategy": "Verify folder structure supports the entire pipeline workflow, test file access permissions, ensure proper backup and archival processes, and validate that naming conventions are consistently applied."
+          },
+          {
+            "id": 8,
+            "title": "Final Quality Assurance and Pipeline Integration",
+            "description": "Conduct comprehensive end-to-end testing of the entire cleansing pipeline, implement final quality checks, create documentation, and ensure the system meets all requirements with proper error handling and monitoring.",
+            "dependencies": [
+              "2.7"
+            ],
+            "details": "Perform complete pipeline testing including: full workflow execution with real data, error scenario testing, performance validation, data lineage verification, comprehensive logging review, user acceptance testing, creation of operational documentation, and establishment of monitoring and maintenance procedures.",
+            "status": "pending",
+            "testStrategy": "Execute full end-to-end tests with production data, validate all quality metrics meet requirements, test error recovery scenarios, ensure documentation is complete and accurate, and verify the pipeline can be reliably operated by end users."
+          }
+        ]
+      }
+    ],
+    "metadata": {
+      "created": "2025-08-22T01:28:17.588Z",
+      "updated": "2025-08-25T00:31:40.230Z",
+      "description": "기능명세서 개선 작업을 위한 태그"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "session_id": "20250821_120348",
+  "statistics": {
+    "start_time": "2025-08-21T12:03:48.989083",
+    "total_logs": 21,
+    "error_count": 4,
+    "warning_count": 0,
+    "info_count": 17,
+    "end_time": "2025-08-21T12:03:54.099304",
+    "duration_minutes": 0.08517051666666667
+  },
+  "log_files": {
+    "main_log": "log\\main_2025-08-21_120348.log",
+    "validation_log": "log\\validation_2025-08-21_120348.log",
+    "marking_log": "log\\marking_2025-08-21_120348.log",
+    "contamination_log": "log\\contamination_2025-08-21_120348.log",
+    "mcp_log": "log\\mcp_2025-08-21_120348.log"
+  }
+}
